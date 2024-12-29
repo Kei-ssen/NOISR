@@ -11,7 +11,7 @@
     <!-- FAVICÓN -->
     <link href="" rel="icon" type="image/png">
 
-    <!-- TIPOGRAFÍA -->
+    <!-- TIPOGRAFÍA cambiar -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Instrument+Serif:ital@0;1&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -25,36 +25,17 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<header>
-    <!-- MENÚ -->
-    
-    <div class="container">
-        <nav class="navbar">
-            <a href="#" class="logo">NOISR</a>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Catalog</a></li>
-                <li><a href="#">Contact</a></li>
-                <button>Sign In</button>
-                <button>Sign Up</button>
-            </ul>
-            <i class="fas fa-bars fa-2x" id="burger"></i>
-        </nav>
-        
-    </div>
-
-    <div class="video-container">
-        <video src="media/video/7020041_Background_Triangle_1920x1080.mp4" autoplay loop muted></video>
-    </div>
-</header>
     <!-- FONDO -->
     <div class="gradient-bg">
         <svg xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <filter id="goo">
                     <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                    <feColorMatrix
+                        in="blur"
+                        mode="matrix"
+                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                        result="goo" />
                     <feBlend in="SourceGraphic" in2="goo" />
                 </filter>
             </defs>
@@ -65,8 +46,33 @@
             <div class="g3"></div>
             <div class="g4"></div>
             <div class="g5"></div>
+            <div class="interactive"></div>
         </div>
     </div>
+
+    <header>
+        
+        <!-- MENÚ -->
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">NOISR</a>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Catalog</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <button>Sign In</button>
+                    <button>Sign Up</button>
+                </ul>
+                <i class="fas fa-bars fa-2x" id="burger"></i>
+            </nav>
+            
+        </div>
+
+        <!-- <div class="video-container">
+            <video src="media/video/7020041_Background_Triangle_1920x1080.mp4" autoplay loop muted></video>
+        </div> -->
+    </header>
     <main>
         <section id="events-1511">
             <div class="cs-container">
@@ -148,14 +154,14 @@
                     <div class="cs-subscribe">
                         <div class="cs-content">
                             <span class="cs-topper">How To Get Started</span>
-                            <h2 class="cs-title">Subscribe for Newsletter</h2>
+                            <h2 class="cs-title">Dream Pop.<br>Noise Pop.<br>Indie at its core.</h2>
                             <p class="cs-text">
-                                Subscribe to our newsletter and stay up-to-date with the latest news, exclusive offers, and exciting updates.
+                                Explore the newest tracks today!
                             </p>
-                            <form class="cs-form" name="Contact Form" method="post">
+                            <!-- <form class="cs-form" name="Contact Form" method="post">
                                 <input class="cs-input" type="email" id="cs-email-1511" name="find-us" placeholder="Email Address">
                                 <button class="cs-button-solid cs-submit" type="submit">Subscribe Now</button>
-                            </form>
+                            </form> -->
                         </div>
                     </div>
                 </div>
@@ -364,10 +370,10 @@
                     </li>
                 </ul>
             </div>
-            <!-- Top left gold graphic -->
-            <img class="cs-graphic1" decoding="async" src="media/graphic.png" alt="gold flake graphic" width="370" height="322" aria-hidden="true">
-            <!-- Bottom right gold graphic -->
-            <img class="cs-graphic2" decoding="async" src="media/graphic.png" alt="gold flake graphic" width="370" height="322" aria-hidden="true">
+
+            <!-- GRÁFICAS -->
+            <!-- <img class="cs-graphic1" decoding="async" src="media/graphic.png" alt="gold flake graphic" width="370" height="322" aria-hidden="true">
+            <img class="cs-graphic2" decoding="async" src="media/graphic.png" alt="gold flake graphic" width="370" height="322" aria-hidden="true"> -->
         </section>
                                 
         <section class="inicio_registro">
@@ -375,6 +381,7 @@
             <a class="registro" class="button-text" href="registro/registro.html">Crear cuenta</a>
         </section>
     </main>
+
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 

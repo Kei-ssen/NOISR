@@ -1,21 +1,18 @@
 :root {
-    --color-bg1: rgb(255, 255, 255);
-    --color-bg2: rgba(255, 255, 255, 0.1);
-    --color1: 250, 250, 51;
-    --color2: 255, 255, 143;
-    --color3: 255, 253, 208;
-    --color4: 255, 255, 143;
-    --color5: 250, 250, 51;
-    --circle-size: 100%;
-    --blending: hard-light;
+  --color-bg1: rgb(255, 255, 255);
+  --color-bg2: rgb(230, 245, 255);
+  --color1: 200, 160, 255;
+  --color2: 200, 160, 255;
+  --color3: 200, 160, 255;
+  --color4: 200, 160, 255;
+  --color5: 200, 160, 255;
+  --color-interactive: 200, 160, 255;
+  --circle-size: 80%;
+  --blending: hard-light;
 /* ----------------- */
-    --primary: #ff6a3e;
-    --primaryLight: #ffba43;
-    --secondary: #ffba43;
-    --secondaryLight: #ffba43;
-    --headerColor: #1a1a1a;
-    --bodyTextColor: #4e4b66;
-    --bodyTextColorWhite: #fafbfc;
+    --black: #000000;
+    --white: #ffffff;
+    --secondary: #ffe571;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -40,6 +37,12 @@ body{
     overflow-x: hidden;
 }
 
+header, main {
+  position: relative;
+  z-index: 1;
+}
+
+
 .cs-topper {
   font-size: var(--topperFontSize);
   line-height: 1.2em;
@@ -47,7 +50,7 @@ body{
   text-align: inherit;
   letter-spacing: .1em;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--black);
   margin-bottom: 0.25rem;
   display: block;
 }
@@ -59,7 +62,7 @@ body{
   text-align: inherit;
   max-width: 43.75rem;
   margin: 0 0 1rem 0;
-  color: var(--headerColor);
+  color: var(--black);
   position: relative;
 }
 
@@ -70,14 +73,196 @@ body{
   width: 100%;
   max-width: 40.625rem;
   margin: 0;
-  color: var(--bodyTextColor);
+  color: var(--black);
+}
+
+/* FONDO */
+@keyframes moveInCircle {
+  0% {
+      transform: rotate(0deg);
+  }
+  50% {
+      transform: rotate(180deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+      transform: translateY(-50%);
+  }
+  50% {
+      transform: translateY(50%);
+  }
+  100% {
+      transform: translateY(-50%);
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+      transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+      transform: translateX(50%) translateY(10%);
+  }
+  100% {
+      transform: translateX(-50%) translateY(-10%);
+  }
+}
+
+.gradient-bg {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: -1;
+
+  svg {
+      display: none;
+  }
+
+  .gradients-container {
+      filter: url(#goo) blur(40px);
+      width: 100%;
+      height: 100%;
+  }
+
+  .g1 {
+      position: absolute;
+      background: radial-gradient(
+              circle at center,
+              rgba(var(--color1), 0.8) 0,
+              rgba(var(--color1), 0) 50%
+          )
+          no-repeat;
+      mix-blend-mode: var(--blending);
+
+      width: var(--circle-size);
+      height: var(--circle-size);
+      top: calc(50% - var(--circle-size) / 2);
+      left: calc(50% - var(--circle-size) / 2);
+
+      transform-origin: center center;
+      animation: moveVertical 30s ease infinite;
+
+      opacity: 1;
+  }
+
+  .g2 {
+      position: absolute;
+      background: radial-gradient(
+              circle at center,
+              rgba(var(--color2), 0.8) 0,
+              rgba(var(--color2), 0) 50%
+          )
+          no-repeat;
+      mix-blend-mode: var(--blending);
+
+      width: var(--circle-size);
+      height: var(--circle-size);
+      top: calc(50% - var(--circle-size) / 2);
+      left: calc(50% - var(--circle-size) / 2);
+
+      transform-origin: calc(50% - 400px);
+      animation: moveInCircle 20s reverse infinite;
+
+      opacity: 1;
+  }
+
+  .g3 {
+      position: absolute;
+      background: radial-gradient(
+              circle at center,
+              rgba(var(--color3), 0.8) 0,
+              rgba(var(--color3), 0) 50%
+          )
+          no-repeat;
+      mix-blend-mode: var(--blending);
+
+      width: var(--circle-size);
+      height: var(--circle-size);
+      top: calc(50% - var(--circle-size) / 2 + 200px);
+      left: calc(50% - var(--circle-size) / 2 - 500px);
+
+      transform-origin: calc(50% + 400px);
+      animation: moveInCircle 40s linear infinite;
+
+      opacity: 1;
+  }
+
+  .g4 {
+      position: absolute;
+      background: radial-gradient(
+              circle at center,
+              rgba(var(--color4), 0.8) 0,
+              rgba(var(--color4), 0) 50%
+          )
+          no-repeat;
+      mix-blend-mode: var(--blending);
+
+      width: var(--circle-size);
+      height: var(--circle-size);
+      top: calc(50% - var(--circle-size) / 2);
+      left: calc(50% - var(--circle-size) / 2);
+
+      transform-origin: calc(50% - 200px);
+      animation: moveHorizontal 40s ease infinite;
+
+      opacity: 0.7;
+  }
+
+  .g5 {
+      position: absolute;
+      background: radial-gradient(
+              circle at center,
+              rgba(var(--color5), 0.8) 0,
+              rgba(var(--color5), 0) 50%
+          )
+          no-repeat;
+      mix-blend-mode: var(--blending);
+
+      width: calc(var(--circle-size) * 2);
+      height: calc(var(--circle-size) * 2);
+      top: calc(50% - var(--circle-size));
+      left: calc(50% - var(--circle-size));
+
+      transform-origin: calc(50% - 800px) calc(50% + 200px);
+      animation: moveInCircle 20s ease infinite;
+
+      opacity: 1;
+  }
+
+  .interactive {
+      position: absolute;
+      background: radial-gradient(
+              circle at center,
+              rgba(var(--color-interactive), 0.8) 0,
+              rgba(var(--color-interactive), 0) 50%
+          )
+          no-repeat;
+      mix-blend-mode: var(--blending);
+
+      width: 100%;
+      height: 100%;
+      top: -50%;
+      left: -50%;
+
+      opacity: 0.7;
+  }
 }
                           
 /* HAMBURGUER MENU  */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 header{
-    min-height: 100vh;
+    min-height: 3rem;
     position: relative;
     .container{
         max-width: 1368px;
@@ -92,7 +277,7 @@ header{
                 font-size: 2.25rem;
                 text-decoration: none;
                 text-transform: uppercase;
-                color: #fff;
+                color: var(--black);
                 font-weight: 700;
             }
             .nav-links{
@@ -102,7 +287,7 @@ header{
                     list-style-type: none;
                     a{
                         text-decoration: none;
-                        color: #fff;
+                        color: var(--black);
                         margin: 0 1.25rem;
                         font-weight: 500;
                         font-size: 1.05rem;
@@ -110,7 +295,7 @@ header{
                         &::after{
                             position: absolute;
                             content: '';
-                            background-color: #fff;
+                            background-color: var(--black);
                             bottom: -5px;
                             left: 0;
                             width: 0%;
@@ -130,14 +315,14 @@ header{
                     margin: 0 1rem;
                     border-radius: 6px;
                     background: transparent;
-                    border: 2px solid #fff;
-                    color: #fff;
+                    border: 2px solid var(--black);
+                    color: var(--black);
                     font-weight: 500;
                 }
             }
             i{
                 display: none;
-                color: #fff;
+                color: var(--black);
                 cursor: pointer;
             }
         }
@@ -149,7 +334,7 @@ header{
             align-items: flex-start;
             width: 35rem;
             h1{
-                color: #fff;
+                color: var(--black);
                 font-size: 2.5rem;
                 margin-bottom: 0;
                 font-weight: 700;
@@ -157,7 +342,7 @@ header{
             }
             p{
                 margin-top: 0;
-                color: #fff;
+                color: var(--black);
                 font-weight: 500;
                 line-height: 1.4;
                 font-size: 0.9rem;
@@ -166,7 +351,7 @@ header{
             button{
                 margin-top: 1rem;
                 background-color: #000;
-                color: #fff;
+                color: var(--black);
                 border: none;
                 outline: none;
                 padding: 1rem 1.5rem;
@@ -176,7 +361,7 @@ header{
             }
         }
     }
-    .video-container{
+    /* .video-container{
         z-index: -1;
         position: absolute;
         top: 0;
@@ -197,7 +382,7 @@ header{
             width: 100%;
             background-color: rgba(0,0,0,0.82);
         }
-    }
+    } */
 }
 
 @media(max-width: 850px){
@@ -413,7 +598,7 @@ header{
     background-color: #fff;
     border-radius: 3.125rem;
     overflow: hidden;
-    color: var(--headerColor);
+    color: var(--black);
     border: 1px solid var(--secondary);
     display: inline-block;
     position: absolute;
@@ -440,7 +625,7 @@ header{
     font-weight: 700;
     margin: 0 0 0.75rem 0;
     padding: 0 1rem;
-    color: var(--primary);
+    color: var(--black);
     border-radius: 3.125rem;
     overflow: hidden;
     display: inline-block;
@@ -452,7 +637,7 @@ header{
     content: '';
     width: 100%;
     height: 100%;
-    background: var(--primary);
+    background: var(--black);
     opacity: .1;
     position: absolute;
     display: block;
@@ -466,14 +651,14 @@ header{
     line-height: 1.2em;
     font-weight: 700;
     margin: 0 0 1rem 0;
-    color: var(--headerColor);
+    color: var(--black);
   }
   #events-1511 .cs-time,
   #events-1511 .cs-place {
     font-size: 1rem;
     line-height: 1.5em;
     margin: 0;
-    color: var(--bodyTextColor);
+    color: var(--black);
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -495,7 +680,7 @@ header{
     /* 16px - 60px left & right */
     padding: clamp(2.5rem, 10vw, 6.25rem) clamp(1rem, 5vw, 3.75rem);
     overflow: hidden;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 2.5rem;
     /* prevents padding from affecting height abd width */
     box-sizing: border-box;
@@ -506,21 +691,26 @@ header{
     gap: clamp(1.75rem, 4vw, 2.25rem);
     position: relative;
     z-index: 1;
+    transition: box-shadow 0.3s ease-in-out;
   }
   #events-1511 .cs-subscribe:before {
     /* background-color */
     content: '';
     width: 100%;
     height: 100%;
-    background: var(--secondary);
+    background: var(--white);
     opacity: .1;
     position: absolute;
     display: block;
     top: 0;
     left: 0;
   }
+  #events-1511 .cs-subscribe:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
   #events-1511 .cs-subscribe .cs-topper {
     color: var(--secondary);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
   #events-1511 .cs-subscribe .cs-title {
     max-width: 100%;
@@ -957,7 +1147,7 @@ header{
     /* color border */
     content: '';
     border-radius: 16.25rem;
-    border: 5px solid var(--primary);
+    border: 5px solid var(--black);
     opacity: 0.3;
     position: absolute;
     top: -1px;
@@ -987,7 +1177,7 @@ header{
   }
   #services-1829 .cs-item:hover .cs-h3,
   #services-1829 .cs-item:hover .cs-job {
-    color: var(--bodyTextColorWhite);
+    color: var(--black);
   }
   #services-1829 .cs-item:hover .cs-picture img {
     transform: scale(1.1);
@@ -1015,7 +1205,7 @@ header{
     content: '';
     width: 100%;
     height: 100%;
-    background-color: var(--primary);
+    background-color: var(--black);
     opacity: 0.3;
     position: absolute;
     top: 0;
@@ -1029,7 +1219,7 @@ header{
     line-height: 1.2em;
     width: 70%;
     margin: 0;
-    color: var(--headerColor);
+    color: var(--black);
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -1080,8 +1270,8 @@ header{
     left: 0;
     z-index: -1;
   }
-  #services-1829 .cs-graphic1 {
-    /* 200px - 548px */
+  /* 200px - 548px */
+  /* #services-1829 .cs-graphic1 {
     width: clamp(12.5rem, 30vw, 34.25rem);
     height: auto;
     opacity: 0.5;
@@ -1100,12 +1290,12 @@ header{
     right: 0;
     bottom: calc(0/16 * 1rem);
     z-index: 0;
-  }
+  } */
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #services-1829:before {
-    background: linear-gradient(89deg, rgba(255, 243, 236, 0.9) 44.46%, rgba(255, 243, 236, 0) 78.47%);
+    background: linear-gradient(89deg, rgba(255, 243, 236, 0.9) 44.46%, rgba(255, 243, 236, 0.2) 78.47%);
     opacity: 1;
   }
   #services-1829 .cs-card-group {
@@ -1147,144 +1337,4 @@ header{
     right: auto;
     left: 50%;
   }
-}
-                                                             
-
-/* GRADIENT  */
-
-@keyframes moveInCircle {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(180deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-}
-  
-@keyframes moveVertical {
-    0% {
-      transform: translateY(-50%);
-    }
-    50% {
-      transform: translateY(50%);
-    }
-    100% {
-      transform: translateY(-50%);
-    }
-}
-  
-@keyframes moveHorizontal {
-    0% {
-      transform: translateX(-50%) translateY(-10%);
-    }
-    50% {
-      transform: translateX(50%) translateY(10%);
-    }
-    100% {
-      transform: translateX(-50%) translateY(-10%);
-    }
-}
-
-.gradient-bg {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
-    top: 0;
-    left: 0;
-  
-    svg {
-        display:none
-    }
-  
-  
-    .gradients-container {
-        filter: url(#goo) blur(40px) ;
-        width: 100%;
-        height: 100%;
-    }
-  
-    .g1 {
-        position: absolute;
-        background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
-        mix-blend-mode: var(--blending);
-    
-        width: var(--circle-size);
-        height: var(--circle-size);
-        top: calc(50% - var(--circle-size) / 2);
-        left: calc(50% - var(--circle-size) / 2);
-    
-        transform-origin: center center;
-        animation: moveVertical 30s ease infinite;
-    
-        opacity: 1;
-    }
-  
-    .g2 {
-        position: absolute;
-        background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
-        mix-blend-mode: var(--blending);
-    
-        width: var(--circle-size);
-        height: var(--circle-size);
-        top: calc(50% - var(--circle-size) / 2);
-        left: calc(50% - var(--circle-size) / 2);
-    
-        transform-origin: calc(50% - 400px);
-        animation: moveInCircle 20s reverse infinite;
-    
-        opacity: 1;
-    }
-  
-    .g3 {
-        position: absolute;
-        background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
-        mix-blend-mode: var(--blending);
-    
-        width: var(--circle-size);
-        height: var(--circle-size);
-        top: calc(50% - var(--circle-size) / 2 + 200px);
-        left: calc(50% - var(--circle-size) / 2 - 500px);
-    
-        transform-origin: calc(50% + 400px);
-        animation: moveInCircle 40s linear infinite;
-    
-        opacity: 1;
-    }
-  
-    .g4 {
-        position: absolute;
-        background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
-        mix-blend-mode: var(--blending);
-    
-        width: var(--circle-size);
-        height: var(--circle-size);
-        top: calc(50% - var(--circle-size) / 2);
-        left: calc(50% - var(--circle-size) / 2);
-    
-        transform-origin: calc(50% - 200px);
-        animation: moveHorizontal 40s ease infinite;
-    
-        opacity: 0.7;
-    }
-  
-    .g5 {
-        position: absolute;
-        background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
-        mix-blend-mode: var(--blending);
-    
-        width: calc(var(--circle-size) * 2);
-        height: calc(var(--circle-size) * 2);
-        top: calc(50% - var(--circle-size));
-        left: calc(50% - var(--circle-size));
-    
-        transform-origin: calc(50% - 800px) calc(50% + 200px);
-        animation: moveInCircle 20s ease infinite;
-    
-        opacity: 1;
-    }
 }
