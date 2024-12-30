@@ -10,6 +10,9 @@
   --white: #ffffff;
   --primary: #a42fe3;
   --secondary: #ffe571;
+  --primaryB: #c46bf5;
+  --secondaryB: #fcea99;
+
   /* 13px - 16px */
   --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
   /* 31px - 49px */
@@ -25,6 +28,20 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: 'Montserrat',sans-serif;
+}
+
+/* SCROLLBAR */
+html::-webkit-scrollbar {
+    width: 15px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border-radius: 10px;
 }
 
 body{
@@ -261,7 +278,7 @@ header{
     min-height: 3rem;
     position: sticky;
     top: 0;
-    z-index: 5;
+    z-index: 50;
     backdrop-filter: blur(50px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     .menu{
@@ -322,7 +339,7 @@ header{
                     outline: none;
                     cursor: pointer;
                     padding: 0.75rem 1rem;
-                    border-radius: 6px;
+                    border-radius: 50px;
                     background: transparent;
                     border: 2px solid var(--black);
                     color: var(--black);
@@ -336,12 +353,12 @@ header{
                   margin: 0;
                 }
                 .btn:hover{
-                  background-color: var(--secondary);
+                  background-color: var(--secondaryB);
                   transition: 0.3s ease-in-out;
                   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
                 }
                 .btn2:hover{
-                  background-color: var(--primary);
+                  background-color: var(--primaryB);
                   transition: 0.3s ease-in-out;
                   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
                 }
@@ -460,9 +477,154 @@ header{
         }
     }   
 }
-/*-- -------------------------- -->
-<---          Events            -->
-<--- -------------------------- -*/
+
+/* BARRA */
+.dreamNoise-btn {
+  font-size: var(--bodyFontSize);
+  color: var(--black);
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 600;
+  border: 2px solid var(--black);
+  border-radius: 50px;
+  padding: 10px 18px;
+  transition: 0.3s ease-in-out;
+}
+
+.dreamNoise-btn:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  /* transform: scale(1.10) rotate(360deg); */
+}
+
+.dreamNoise-btn.rotated {
+  transform: rotate(360deg); 
+}
+
+/* BOTONES */
+.theme-switch {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnDark {
+  background-color: transparent;
+  color: var(--white-color);
+  padding: 10px 18px;
+  border: 2px solid var(--black);
+  border-radius: 50px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btnLight {
+  background-color: transparent;
+  color: var(--white-color);
+  padding: 10px 20px;
+  border: 2px solid var(--black);
+  border-radius: 50px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btnDark i,
+.btnLight i {
+  font-size: 1rem;
+  color: var(--black);
+}
+
+.theme-switch .hide-cont {
+  display: none;
+}
+
+.btnLight:hover {
+  background-color: var(--primaryB);
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.btnDark:hover {
+  background-color: var(--secondaryB);
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* BUSCAR */
+.cs-barra {
+  margin: 3rem 1rem 1rem 1rem;
+}
+
+.barra {
+  gap: 20px;
+  width: 100%;
+  max-width: 80rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.campo {
+  outline: none;
+  box-sizing: border-box;
+  height: 40px;
+  width: 0;
+  padding: 0 27px;
+  color: var(--black);
+  border-radius: 50px;
+  font-size: 1rem;
+  border: none;
+  transition: 0.3s ease-in-out;
+  background-color: transparent;
+}
+
+.campo::placeholder {
+  color: var(--black);
+  font-weight: 500;
+}
+
+.lupa {
+  right: 0;
+  top: 0;
+  width: 55px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid var(--black);
+  line-height: 36px;
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+  position: absolute;
+}
+
+.lupa i {
+  font-size: 1rem;
+  color: var(--black);
+  line-height: 36px;
+  transition: 0.3s ease-in-out;
+}
+
+.searchCont:hover input {
+  width: 350px;
+  border: 2px solid var(--black);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.searchCont {
+  position: relative;
+}
+
+/* SECCIÓN 1 */
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
@@ -489,14 +651,14 @@ header{
     }
   }
   /* NOVEDADES TOP */
-  #events-1511 {
-    padding: var(--sectionPadding);
+  #section1 {
+    padding: 0 1rem;
     overflow: hidden;
     display: block;
     position: relative;
     z-index: 1;
   }
-  #events-1511 .cs-container {
+  #section1 .cs-container {
     width: 100%;
     max-width: 80rem;
     margin: auto;
@@ -507,13 +669,13 @@ header{
     gap: clamp(3rem, 6vw, 4rem);
   }
  
-  #events-1511 .cs-title {
+  #section1 .cs-title {
     max-width: 24ch;
   }
-  #events-1511 .cs-text {
+  #section1 .cs-text {
     max-width: 100%;
   }
-  #events-1511 .cs-wrapper {
+  #section1 .cs-wrapper {
     width: 100%;
     display: flex;
     flex-direction: column-reverse;
@@ -521,7 +683,7 @@ header{
     /* 16px - 20px */
     gap: clamp(1rem, 2.5vw, 1.25rem);
   }
-  #events-1511 .cs-card-group {
+  #section1 .cs-card-group {
     width: 100%;
     /* changes to 741px at desktop */
     max-width: 31.25rem;
@@ -534,7 +696,7 @@ header{
     /* gap: clamp(1rem, 2.5vw, 1.25rem); */
     gap: 0.5rem;
   }
-  #events-1511 .titleIcon {
+  #section1 .titleIcon {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -542,11 +704,11 @@ header{
     gap: 1rem;
     margin-bottom: 1rem;
   }
-  #events-1511 .fireIcon {
+  #section1 .fireIcon {
     font-size: 2rem;
     color: var(--primary);
   }
-  #events-1511 .h3Title {
+  #section1 .h3Title {
     /* 20px - 25px */
     font-size: clamp(1.25rem, 2vw, 1.5625rem);
     line-height: 1.2em;
@@ -554,7 +716,7 @@ header{
     /* margin: 0 0 0.5rem 0; */
     color: var(--black);
   }
-  #events-1511 .cs-item {
+  #section1 .cs-item {
     text-align: left;
     list-style: none;
     width: 100%;
@@ -569,23 +731,23 @@ header{
     transition: box-shadow 0.3s ease-in-out;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
-  #events-1511 .cs-item:hover {
+  #section1 .cs-item:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   }
-  #events-1511 .cs-link {
+  #section1 .cs-link {
     text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
   }
-  #events-1511 .cs-image-group {
+  #section1 .cs-image-group {
     /* width: 10%; */
     /* margin-bottom: 1.5rem; */
     position: relative;
     z-index: 1;
   }
-  #events-1511 .cs-picture {
+  #section1 .cs-picture {
     width: 100px;
     height: 0;
     padding-top: 100px;
@@ -597,7 +759,7 @@ header{
     /* prevents flexbox from squsihing it */
     flex: none;
   }
-  #events-1511 .cs-picture img {
+  #section1 .cs-picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -608,13 +770,13 @@ header{
     border-radius: 1.2rem;
   }
 
-  #events-1511 .cs-item:hover .cs-picture img {
+  #section1 .cs-item:hover .cs-picture img {
     border-top-right-radius: 0rem;
     border-bottom-right-radius: 0rem;
     transition: 0.3s ease-in-out;
   }
 
-  #events-1511 .cs-mask {
+  #section1 .cs-mask {
     --maskBG: #fff;
     --maskBorder: #e8e8e8;
     width: 102%;
@@ -626,19 +788,19 @@ header{
     left: -2px;
     z-index: 1;
   }
-  #events-1511 .cs-info {
+  #section1 .cs-info {
     display: flex;
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
   }
-  #events-1511 .groupgroup {
+  #section1 .groupgroup {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start; 
   }
-  #events-1511 .numerTop {
+  #section1 .numerTop {
     /* font-size: 1.5rem; */
     font-weight: 700;
     color: var(--white);
@@ -648,7 +810,7 @@ header{
     display: inline-block;
   }
 
-  #events-1511 .numerTop::before {
+  #section1 .numerTop::before {
     content: '';
     position: absolute;
     top: 0;
@@ -659,13 +821,13 @@ header{
     border-radius: 50%; 
     z-index: -1;
   }
-  #events-1511 .groupText {
+  #section1 .groupText {
     margin-left: 1rem;
   }
-  #events-1511 p {
+  #section1 p {
     color: var(--black);
   }
-  #events-1511 .cs-h3 {
+  #section1 .cs-h3 {
     /* 20px - 25px */
     font-size: clamp(1.25rem, 2vw, 1.5625rem);
     line-height: 1.2em;
@@ -673,12 +835,12 @@ header{
     margin: 0 0 0.5rem 0;
     color: var(--black);
   }
-  #events-1511 .iconRepro {
+  #section1 .iconRepro {
     display: flex;
     flex-direction: row;
   }
-  #events-1511 .play,
-  #events-1511 .pause  {
+  #section1 .play,
+  #section1 .pause  {
     font-size: 1.5rem;
     color: var(--secondary);
     display: flex;
@@ -689,7 +851,7 @@ header{
   }
 
   /* INTRO */
-  #events-1511 .cs-intro {
+  #section1 .cs-intro {
     width: 100%;
     max-width: 52.5rem;
     margin: auto;
@@ -711,7 +873,7 @@ header{
     transition: box-shadow 0.3s ease-in-out;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
-  #events-1511 .cs-intro:before {
+  #section1 .cs-intro:before {
     /* background-color */
     content: '';
     width: 100%;
@@ -723,14 +885,14 @@ header{
     top: 0;
     left: 0;
   }
-  #events-1511 .cs-intro:hover {
+  #section1 .cs-intro:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   }
-  #events-1511 .cs-intro .cs-topper {
+  #section1 .cs-intro .cs-topper {
     color: var(--primary);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
-  #events-1511 .cs-intro .cs-title {
+  #section1 .cs-intro .cs-title {
     max-width: 100%;
     color: var(--black);
   }
@@ -742,23 +904,23 @@ header{
     color: var(--secondary);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
-  #events-1511 .cs-intro .cs-text {
+  #section1 .cs-intro .cs-text {
     max-width: 31.25rem;
   }
-  #events-1511 .cs-blob {
+  #section1 .cs-blob {
     --blobColor: var(--secondary);
     opacity: .25;
     display: none;
     position: absolute;
   }
-  #events-1511 .cs-blob1 {
+  #section1 .cs-blob1 {
     width: 16.9375rem;
     display: block;
     height: auto;
     top: 0;
     left: -8.75rem;
   }
-  #events-1511 .cs-blob2 {
+  #section1 .cs-blob2 {
     width: 28.8125rem;
     height: auto;
     bottom: 0;
@@ -766,7 +928,7 @@ header{
   }
 
   /* ARTISTAS TOP*/
-  #events-1511 .topArtists {
+  #section1 .topArtists {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -774,11 +936,11 @@ header{
     gap: 1rem;
     margin: 2rem 0 1rem 0;
   }
-  #events-1511 .musicIcon {
+  #section1 .musicIcon {
     font-size: 2rem;
     color: var(--primary);
   }
-  #events-1511 .h3TitleArtist {
+  #section1 .h3TitleArtist {
     /* 20px - 25px */
     font-size: clamp(1.25rem, 2vw, 1.5625rem);
     line-height: 1.2em;
@@ -844,31 +1006,31 @@ header{
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #events-1511 .cs-card-group {
+  #section1 .cs-card-group {
     max-width: 80rem;
   }
-  #events-1511 .cs-link {
+  #section1 .cs-link {
     flex-direction: row;
     align-items: center;
   }
-  #events-1511 .cs-image-group {
+  #section1 .cs-image-group {
     /* width: 40%; */
     max-width: 18.75rem;
   }
-  #events-1511 .cs-input {
+  #section1 .cs-input {
     width: 100%;
   }
-  #events-1511 .cs-blob1 {
+  #section1 .cs-blob1 {
     left: 0;
   }
 }
 /* Large Desktop - 1300px */
 @media only screen and (min-width: 81.25rem) {
-  #events-1511 .cs-wrapper {
+  #section1 .cs-wrapper {
     flex-direction: row;
     align-items: stretch;
   }
-  #events-1511 .cs-card-group {
+  #section1 .cs-card-group {
     width: 55%;
     max-width: 46.3125rem;
     /* prevents flexbox from squishing it */
@@ -876,7 +1038,7 @@ header{
     /* sends it to the right in the 2nd position */
     order: 2;
   }
-  #events-1511 .cs-intro {
+  #section1 .cs-intro {
     height: auto;
     margin: 0;
     display: flex;
@@ -884,16 +1046,16 @@ header{
     align-items: center;
     justify-content: center;
   }
-  #events-1511 .cs-blob2 {
+  #section1 .cs-blob2 {
     display: block;
   }
-  #events-1511 .cs-floater1 {
+  #section1 .cs-floater1 {
     margin-left: 34.4375rem;
     left: 50%;
     top: 0.625rem;
     right: auto;
   }
-  #events-1511 .cs-floater2 {
+  #section1 .cs-floater2 {
     margin-right: 24.75rem;
     display: block;
     right: 50%;
