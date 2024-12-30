@@ -1,27 +1,22 @@
 :root {
+  /* DEGRADADO FONDO */
   --color-bg1: rgb(255, 255, 255);
   --color-bg2: rgb(230, 245, 255);
-  --color1: 200, 160, 255;
-  --color2: 200, 160, 255;
-  --color3: 200, 160, 255;
-  --color4: 200, 160, 255;
-  --color5: 200, 160, 255;
-  --color-interactive: 200, 160, 255;
+  --color-gradient: 200, 160, 255;
   --circle-size: 80%;
   --blending: hard-light;
 /* ----------------- */
-    --black: #000000;
-    --white: #ffffff;
-    --primary: #a42fe3;
-    --secondary: #ffe571;
-    /* 13px - 16px */
-    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-    /* 31px - 49px */
-    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-    --bodyFontSize: 1rem;
-    /* 60px - 100px top and bottom */
-    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-
+  --black: #000000;
+  --white: #ffffff;
+  --primary: #a42fe3;
+  --secondary: #ffe571;
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 }
 
 *, *:after{
@@ -139,8 +134,8 @@ header, main {
       position: absolute;
       background: radial-gradient(
               circle at center,
-              rgba(var(--color1), 0.8) 0,
-              rgba(var(--color1), 0) 50%
+              rgba(var(--color-gradient), 0.8) 0,
+              rgba(var(--color-gradient), 0) 50%
           )
           no-repeat;
       mix-blend-mode: var(--blending);
@@ -160,8 +155,8 @@ header, main {
       position: absolute;
       background: radial-gradient(
               circle at center,
-              rgba(var(--color2), 0.8) 0,
-              rgba(var(--color2), 0) 50%
+              rgba(var(--color-gradient), 0.8) 0,
+              rgba(var(--color-gradient), 0) 50%
           )
           no-repeat;
       mix-blend-mode: var(--blending);
@@ -181,8 +176,8 @@ header, main {
       position: absolute;
       background: radial-gradient(
               circle at center,
-              rgba(var(--color3), 0.8) 0,
-              rgba(var(--color3), 0) 50%
+              rgba(var(--color-gradient), 0.8) 0,
+              rgba(var(--color-gradient), 0) 50%
           )
           no-repeat;
       mix-blend-mode: var(--blending);
@@ -202,8 +197,8 @@ header, main {
       position: absolute;
       background: radial-gradient(
               circle at center,
-              rgba(var(--color4), 0.8) 0,
-              rgba(var(--color4), 0) 50%
+              rgba(var(--color-gradient), 0.8) 0,
+              rgba(var(--color-gradient), 0) 50%
           )
           no-repeat;
       mix-blend-mode: var(--blending);
@@ -223,8 +218,8 @@ header, main {
       position: absolute;
       background: radial-gradient(
               circle at center,
-              rgba(var(--color5), 0.8) 0,
-              rgba(var(--color5), 0) 50%
+              rgba(var(--color-gradient), 0.8) 0,
+              rgba(var(--color-gradient), 0) 50%
           )
           no-repeat;
       mix-blend-mode: var(--blending);
@@ -244,8 +239,8 @@ header, main {
       position: absolute;
       background: radial-gradient(
               circle at center,
-              rgba(var(--color-interactive), 0.8) 0,
-              rgba(var(--color-interactive), 0) 50%
+              rgba(var(--color-gradient), 0.8) 0,
+              rgba(var(--color-gradient), 0) 50%
           )
           no-repeat;
       mix-blend-mode: var(--blending);
@@ -264,22 +259,35 @@ header, main {
 
 header{
     min-height: 3rem;
-    position: relative;
-    .container{
-        max-width: 1368px;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    .menu{
+        max-width: 1345px;
         margin: 0 auto;
         padding: 1rem 2rem;
         .navbar{
-            min-height: 10vh;
+            min-height: 6vh;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            .logos{
+              display: flex;
+              align-items: center;
+            }
             .logo{
                 font-size: 2.25rem;
                 text-decoration: none;
                 text-transform: uppercase;
                 color: var(--black);
                 font-weight: 700;
+            }
+            .logoIcono{
+              height: 40px;
+              width: auto;
+              margin-left: 0.3rem;
             }
             .nav-links{
                 display: flex;
@@ -314,13 +322,18 @@ header{
                     outline: none;
                     cursor: pointer;
                     padding: 0.75rem 1rem;
-                    margin: 0 1rem;
                     border-radius: 6px;
                     background: transparent;
                     border: 2px solid var(--black);
                     color: var(--black);
                     font-weight: 500;
                     transition: 0.3s ease-in-out;
+                }
+                .btn {
+                  margin: 0 2rem 0 1rem;
+                }
+                .btn2 {
+                  margin: 0;
                 }
                 .btn:hover{
                   background-color: var(--secondary);
@@ -374,33 +387,11 @@ header{
             } */
         }
     }
-    /* .video-container{
-        z-index: -1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100vw;
-        video{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
-        &::after{
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background-color: rgba(0,0,0,0.82);
-        }
-    } */
 }
 
-@media(max-width: 850px){
+@media(max-width: 900px){
     header{
-        .container{
+        .menu{
             .navbar{
                 .nav-links{
                     position: absolute;
@@ -456,7 +447,7 @@ header{
 
 @media(max-width: 500px){
     header{
-        .container{
+        .menu{
             .showcase{
               h1{
                 font-size: 2.1rem;
@@ -674,31 +665,6 @@ header{
   #events-1511 p {
     color: var(--black);
   }
-  /* #events-1511 .cs-tag {
-    font-size: 1rem;
-    line-height: 2.25rem;
-    font-weight: 700;
-    margin: 0 0 0.75rem 0;
-    padding: 0 1rem;
-    color: var(--black);
-    border-radius: 3.125rem;
-    overflow: hidden;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-  } */
-  /* #events-1511 .cs-tag:before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: var(--primary);
-    opacity: 1;
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  } */
   #events-1511 .cs-h3 {
     /* 20px - 25px */
     font-size: clamp(1.25rem, 2vw, 1.5625rem);
@@ -845,18 +811,29 @@ header{
     text-align: center;
   }
   
-  .circle-artistTop {
+  .containerBefore {
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    object-fit: cover;
+    overflow: hidden;
+    cursor: pointer;
     margin-bottom: 10px;
+  }
+  .circle-artistTop {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+    object-fit: cover; 
+  }
+
+  .containerBefore:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
     transition: 0.3s ease-in-out;
   }
 
-  .circle-artistTop:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  .containerBefore .circle-artistTop:hover {
     transition: 0.3s ease-in-out;
+    transform: scale(1.3) rotate(7deg);
   }
   
   .artistTop-text {
