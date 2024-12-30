@@ -39,14 +39,14 @@ $(document).ready(function() {
 
     // MODO CLARO/OSCURO
     $("#to-dark-mode").click(function() {
-        $("#section1 .cs-item, #section1 .cs-intro, .artistTop-grid").css("background-color", "rgba(0, 0, 0, 0.2)");
+        $("#section1 .cs-item, #section1 .cs-intro, .artistTop-grid, #albumes .cs-container").css("background-color", "rgba(0, 0, 0, 0.2)");
 
         $("#to-light-mode").removeClass("hide-cont");
         $("#to-dark-mode").addClass("hide-cont");
     });
 
     $("#to-light-mode").click(function() {
-        $("#section1 .cs-item, #section1 .cs-intro, .artistTop-grid").css("background-color", "rgba(255, 255, 255, 0.4)");
+        $("#section1 .cs-item, #section1 .cs-intro, .artistTop-grid, #albumes .cs-container").css("background-color", "rgba(255, 255, 255, 0.4)");
 
         $("#to-dark-mode").removeClass("hide-cont");
         $("#to-light-mode").addClass("hide-cont");
