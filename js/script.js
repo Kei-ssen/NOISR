@@ -56,5 +56,42 @@ $(document).ready(function() {
     $('.dreamNoise-btn').hover(function() {
         $(this).addClass('rotated');
     });
+
+    // CONTADOR
+    var fechaActual = new Date();
+    var yearActual = fechaActual.getFullYear();
+    const nuevoYear = yearActual;
+
+    // Establecer la fecha objetivo al 17 de febrero
+    const nuevaFecha = new Date("Feb 17, " + nuevoYear + " 00:00:00");
+
+    if (fechaActual > nuevaFecha) {
+        nuevaFecha.setFullYear(nuevaFecha.getFullYear() + 1);
+    }
+
+    const d = $('#d');
+    const h = $('#h');
+    const m = $('#m');
+    const s = $('#s');
+
+    let countdown = setInterval(function() {
+        const ahora = new Date();
+        const despues = nuevaFecha.getTime() - ahora.getTime();
+
+        // CALCULAR VARIABLES
+        const dias = Math.floor(despues / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((despues % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((despues % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((despues % (1000 * 60)) / 1000);
+
+        d.text(getTrueNumber(dias));
+        h.text(getTrueNumber(horas));
+        m.text(getTrueNumber(minutos));
+        s.text(getTrueNumber(segundos));
+
+        if (despues <= 0) clearInterval(countdown);
+    }, 1000);
+
+    const getTrueNumber = x => (x < 10 ? "0" + x : x);
 });
 

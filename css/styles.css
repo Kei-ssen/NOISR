@@ -1286,6 +1286,107 @@ header{
   }
 }
 
+/* SECTION 3 */
+#new {
+  padding: 2rem 1rem;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(89deg, rgba(164, 47, 227, 0.4) 44.46%, rgba(230, 245, 255, 0.2) 78.47%);
+}
+
+#new .cs-container {
+  width: 100%;
+  max-width: 80rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* 48px - 64px */
+  gap: 2rem;
+}
+
+#new .cs-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  /* 16px - 20px */
+  gap: clamp(1rem, 2.5vw, 1.25rem);
+  justify-content: space-between;
+}
+
+#new .cs-wrapper .contador {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1 1 50%;
+}
+
+#new .cs-wrapper .cs-intro {
+  flex: 1 1 50%;
+}
+
+.cs-topper2 {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: .1em;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.25rem;
+  display: block;
+  color: var(--primary);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* #new .cs-wrapper .contador img {
+  border-radius: 1.8rem;
+  width: 100%;
+} */
+
+.time {
+  display: flex;
+  justify-content: center;
+  color: var(--black);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.4) 60%), url(../media/new/new1.jpg);
+  width: 40rem;
+  height: 40rem;
+  border-radius: 1.8rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: flex-end;
+  padding-bottom: 2rem;
+  transition: 0.3s ease-in-out;
+}
+
+.time:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease-in-out;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 14px;
+  color: var(--secondary);
+}
+
+.time-unit div {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.time-unit span {
+  font-size: 1rem;
+}
+
+a {
+
+}
+
  /*-- -------------------------- -->
 <---         CATEGORIES           -->
 <--- -------------------------- -*/
@@ -1301,7 +1402,7 @@ header{
     content: '';
     width: 100%;
     height: 100%;
-    background: #F6EDDF;
+    /* background: #F6EDDF; */
     opacity: 0.9;
     display: block;
     position: absolute;
@@ -1488,7 +1589,7 @@ header{
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #services-1829:before {
-    background: linear-gradient(89deg, rgba(255, 243, 236, 0.9) 44.46%, rgba(255, 243, 236, 0.2) 78.47%);
+    /* background: linear-gradient(89deg, rgba(255, 243, 236, 0.9) 44.46%, rgba(255, 243, 236, 0.2) 78.47%); */
     opacity: 1;
   }
   #services-1829 .cs-card-group {
