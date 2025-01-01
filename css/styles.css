@@ -1989,7 +1989,7 @@ a {
     opacity: 1;
     position: absolute;
     display: block;
-    top: 0.8125rem;
+    top: -1rem;
     left: 0;
     z-index: -1;
   }
@@ -2009,7 +2009,6 @@ a {
     line-height: 1.5em;
     font-weight: 400;
     padding-left: 0.5rem;
-    background-color: #fff;
     color: var(--headerColor);
   }
   #pricing-975 .cs-menu-text {
