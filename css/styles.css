@@ -1416,11 +1416,11 @@ a {
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #RPsbs-1097,
-  #RPsbsr-1097 {
+  #new2 {
       padding: var(--sectionPadding);
   }
   #RPsbs-1097 .cs-container,
-  #RPsbsr-1097 .cs-container {
+  #new2 .cs-container {
       width: 100%;
       /* changes to 1280px at desktop */
       max-width: 34.375rem;
@@ -1432,7 +1432,7 @@ a {
       gap: clamp(3rem, 6vw, 4rem);
   }
   #RPsbs-1097 .cs-content,
-  #RPsbsr-1097 .cs-content {
+  #new2 .cs-content {
       /* set text align to left if content needs to be left aligned */
       text-align: left;
       width: 100%;
@@ -1444,15 +1444,15 @@ a {
   }
 
   #RPsbs-1097 .cs-text,
-  #RPsbsr-1097 .cs-text {
+  #new2 .cs-text {
       margin-bottom: 1rem;
   }
   #RPsbs-1097 .cs-text:last-of-type,
-  #RPsbsr-1097 .cs-text:last-of-type {
+  #new2 .cs-text:last-of-type {
       margin-bottom: 2rem;
   }
   #RPsbs-1097 .cs-button-solid,
-  #RPsbsr-1097 .cs-button-solid {
+  #new2 .cs-button-solid {
       font-size: 1rem;
       /* 46px - 56px */
       line-height: clamp(2.875rem, 5.5vw, 3.5rem);
@@ -1472,7 +1472,7 @@ a {
       box-sizing: border-box;
   }
   #RPsbs-1097 .cs-button-solid:before,
-  #RPsbsr-1097 .cs-button-solid:before {
+  #new2 .cs-button-solid:before {
       content: "";
       position: absolute;
       height: 100%;
@@ -1486,11 +1486,11 @@ a {
       transition: width 0.3s;
   }
   #RPsbs-1097 .cs-button-solid:hover:before,
-  #RPsbsr-1097 .cs-button-solid:hover:before {
+  #new2 .cs-button-solid:hover:before {
       width: 100%;
   }
   #RPsbs-1097 .cs-list,
-  #RPsbsr-1097 .cs-list {
+  #new2 .cs-list {
       max-width: 39.375rem;
       margin: 0 0 2rem 0;
       padding: 0;
@@ -1498,7 +1498,7 @@ a {
       overflow: hidden;
   }
   #RPsbs-1097 .cs-li,
-  #RPsbsr-1097 .cs-li {
+  #new2 .cs-li {
       list-style: none;
       margin: 0 0 0.5rem 0;
       color: var(--bodyTextColor);
@@ -1509,7 +1509,7 @@ a {
       position: relative;
   }
   #RPsbs-1097 .cs-li:before,
-  #RPsbsr-1097 .cs-li:before {
+  #new2 .cs-li:before {
       /* bullet */
       content: "";
       width: 1rem;
@@ -1524,7 +1524,7 @@ a {
       flex: none;
   }
   #RPsbs-1097 .cs-info,
-  #RPsbsr-1097 .cs-info {
+  #new2 .cs-info {
       width: 100%;
       padding-top: 2rem;
       border-top: 1px solid #e8e8e8;
@@ -1535,21 +1535,21 @@ a {
       position: relative;
   }
   #RPsbs-1097 .cs-icon,
-  #RPsbsr-1097 .cs-icon {
+  #new2 .cs-icon {
       width: 3.25rem;
       height: auto;
       display: block;
       transition: transform 0.3s;
   }
   #RPsbs-1097 .cs-flex,
-  #RPsbsr-1097 .cs-flex {
+  #new2 .cs-flex {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 0.25rem;
   }
   #RPsbs-1097 .cs-name,
-  #RPsbsr-1097 .cs-name {
+  #new2 .cs-name {
       /* 20px - 25px */
       font-size: clamp(1.25rem, 4vw, 1.5625rem);
       line-height: 1.2em;
@@ -1559,7 +1559,7 @@ a {
       display: block;
   }
   #RPsbs-1097 .cs-desc,
-  #RPsbsr-1097 .cs-desc {
+  #new2 .cs-desc {
       font-size: 0.875rem;
       line-height: 1.5em;
       margin: 0;
@@ -1567,7 +1567,7 @@ a {
       display: block;
   }
   #RPsbs-1097 .cs-image-group,
-  #RPsbsr-1097 .cs-image-group {
+  #new2 .cs-image-group {
       /* scales the whole group based on the view width size and stop when that vales equals .789em, resets at desktop */
       font-size: min(2.09vw, 0.789em);
       width: 43.375em;
@@ -1577,7 +1577,7 @@ a {
       z-index: 1;
   }
   #RPsbs-1097 .cs-picture,
-  #RPsbsr-1097 .cs-picture {
+  #new2 .cs-picture {
       width: 33.875em;
       height: 38em;
       position: absolute;
@@ -1586,14 +1586,14 @@ a {
       z-index: -1;
   }
   #RPsbs-1097 .cs-picture img,
-  #RPsbsr-1097 .cs-picture img {
+  #new2 .cs-picture img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       position: absolute;
   }
   #RPsbs-1097 .cs-graphic,
-  #RPsbsr-1097 .cs-graphic {
+  #new2 .cs-graphic {
       width: 11.5em;
       height: auto;
       display: block;
@@ -1607,14 +1607,14 @@ a {
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   #RPsbs-1097 .cs-container,
-  #RPsbsr-1097 .cs-container {
+  #new2 .cs-container {
       max-width: 80rem;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
   }
   #RPsbs-1097 .cs-image-group,
-  #RPsbsr-1097 .cs-image-group {
+  #new2 .cs-image-group {
       font-size: min(1.2vw, 1em);
       flex: none;
   }
@@ -1626,30 +1626,30 @@ a {
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #RPsbsr-1097 {
+  #new2 {
     background: linear-gradient(89deg, rgba(164, 47, 227, 0.4) 44.46%, rgba(230, 245, 255, 0.2) 78.47%);
   }
-  #RPsbsr-1097 .cs-title{
+  #new2 .cs-title{
     color: var(--secondary);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
   
-  #RPsbsr-1097 .cs-picture {
+  #new2 .cs-picture {
       right: 5.5em;
       left: auto;
   }
-  #RPsbsr-1097 .cs-stripes {
+  #new2 .cs-stripes {
       right: 0;
       left: auto;
   }
-  #RPsbsr-1097 .cs-graphic {
+  #new2 .cs-graphic {
       left: 0;
       right: auto;
   }
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #RPsbsr-1097 .cs-image-group {
+  #new2 .cs-image-group {
       /* sends it to the right in the 2nd position */
       order: 2;
   }
@@ -1662,12 +1662,12 @@ a {
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #services-1829 {
+  #categories {
     padding: var(--sectionPadding);
     overflow: hidden;
     position: relative;
   }
-  #services-1829:before {
+  #categories:before {
     content: '';
     width: 100%;
     height: 100%;
@@ -1678,7 +1678,7 @@ a {
     top: 0;
     left: 0;
   }
-  #services-1829 .cs-container {
+  #categories .cs-container {
     width: 100%;
     max-width: 55rem;
     margin: auto;
@@ -1689,7 +1689,7 @@ a {
     gap: clamp(3rem, 6vw, 4rem);
     position: relative;
   }
-  #services-1829 .cs-content {
+  #categories .cs-content {
     /* set text align to left if content needs to be left aligned */
     text-align: center;
     width: 100%;
@@ -1699,10 +1699,10 @@ a {
     align-items: center;
     z-index: 1;
   }
-  #services-1829 .cs-title {
+  #categories .cs-title {
     max-width: none;
   }
-  #services-1829 .cs-card-group {
+  #categories .cs-card-group {
     width: 100%;
     /* changes to 100% at tablet */
     max-width: 22.5rem;
@@ -1715,7 +1715,7 @@ a {
     /* 16px - 20px */
     gap: clamp(1rem, 2vw, 1.25rem);
   }
-  #services-1829 .cs-item {
+  #categories .cs-item {
     list-style: none;
     width: 100%;
     box-sizing: border-box;
@@ -1727,7 +1727,7 @@ a {
     position: relative;
     z-index: 1;
   }
-  #services-1829 .cs-item:before {
+  #categories .cs-item:before {
     /* color border */
     content: '';
     border-radius: 16.25rem;
@@ -1742,7 +1742,7 @@ a {
     /* prevents mouse from interacting with it */
     pointer-events: none;
   }
-  #services-1829 .cs-item:after {
+  #categories .cs-item:after {
     /* color border white bg */
     content: '';
     border-radius: 16.25rem;
@@ -1756,24 +1756,24 @@ a {
     /* prevents mouse from interacting with it */
     pointer-events: none;
   }
-  #services-1829 .cs-item:hover .cs-flex:before {
+  #categories .cs-item:hover .cs-flex:before {
     opacity: 1;
   }
-  #services-1829 .cs-item:hover .cs-h3,
-  #services-1829 .cs-item:hover .cs-job {
+  #categories .cs-item:hover .cs-h3,
+  #categories .cs-item:hover .cs-job {
     color: var(--black);
   }
-  #services-1829 .cs-item:hover .cs-picture img {
+  #categories .cs-item:hover .cs-picture img {
     transform: scale(1.1);
   }
-  #services-1829 .cs-link {
+  #categories .cs-link {
     text-decoration: none;
     height: 100%;
     display: flex;
     align-items: stretch;
     justify-content: stretch;
   }
-  #services-1829 .cs-flex {
+  #categories .cs-flex {
     text-align: center;
     width: 100%;
     padding: 1rem 0 1.5rem 0;
@@ -1784,7 +1784,7 @@ a {
     position: relative;
     z-index: 1;
   }
-  #services-1829 .cs-flex:before {
+  #categories .cs-flex:before {
     /* background color */
     content: '';
     width: 100%;
@@ -1797,7 +1797,7 @@ a {
     z-index: -1;
     transition: opacity 0.3s;
   }
-  #services-1829 .cs-h3 {
+  #categories .cs-h3 {
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.2em;
@@ -1811,7 +1811,7 @@ a {
     position: relative;
     z-index: 1;
   }
-  #services-1829 .cs-picture {
+  #categories .cs-picture {
     width: auto;
     height: 100%;
     box-sizing: border-box;
@@ -1825,7 +1825,7 @@ a {
     left: 1px;
     z-index: -4;
   }
-  #services-1829 .cs-picture img {
+  #categories .cs-picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1834,7 +1834,7 @@ a {
     left: 0;
     transition: transform 0.7s;
   }
-  #services-1829 .cs-background {
+  #categories .cs-background {
     width: 100%;
     height: 100%;
     display: block;
@@ -1843,7 +1843,7 @@ a {
     left: 0;
     z-index: -1;
   }
-  #services-1829 .cs-background img {
+  #categories .cs-background img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1857,45 +1857,45 @@ a {
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #services-1829:before {
+  #categories:before {
     /* background: linear-gradient(89deg, rgba(255, 243, 236, 0.9) 44.46%, rgba(255, 243, 236, 0.2) 78.47%); */
     opacity: 1;
   }
-  #services-1829 .cs-card-group {
+  #categories .cs-card-group {
     width: 60%;
     max-width: 100%;
   }
-  #services-1829 .cs-item {
+  #categories .cs-item {
     height: auto;
     /* 216px - 336px */
     padding-top: clamp(13.5rem, 23vw, 21rem);
     align-items: stretch;
     grid-column: span 6;
   }
-  #services-1829 .cs-flex {
+  #categories .cs-flex {
     height: auto;
   }
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #services-1829 .cs-container {
+  #categories .cs-container {
     max-width: 80rem;
   }
-  #services-1829 .cs-card-group {
+  #categories .cs-card-group {
     width: 100%;
   }
-  #services-1829 .cs-item {
+  #categories .cs-item {
     grid-column: span 3;
   }
 }
 /* Large Desktop - 1920px */
 @media only screen and (min-width: 120rem) {
-  #services-1829 .cs-graphic1 {
+  #categories .cs-graphic1 {
     margin-right: calc(400/16 * 1rem);
     left: auto;
     right: 50%;
   }
-  #services-1829 .cs-graphic2 {
+  #categories .cs-graphic2 {
     margin-left: calc(420/16 * 1rem);
     right: auto;
     left: 50%;
@@ -1908,10 +1908,10 @@ a {
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #pricing-975 {
+  #playlists {
     padding: var(--sectionPadding);
   }
-  #pricing-975 .cs-container {
+  #playlists .cs-container {
     width: 100%;
     max-width: 80rem;
     margin: auto;
@@ -1921,7 +1921,7 @@ a {
     /* 48px - 64px */
     gap: clamp(3rem, 6vw, 4rem);
   }
-  #pricing-975 .cs-content {
+  #playlists .cs-content {
     /* set text align to left if content needs to be left aligned */
     text-align: center;
     width: 100%;
@@ -1930,10 +1930,10 @@ a {
     /* centers content horizontally, set to flex-start to left align */
     align-items: center;
   }
-  #pricing-975 .cs-title {
+  #playlists .cs-title {
     margin: 0;
   }
-  #pricing-975 .cs-menu {
+  #playlists .cs-menu {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1942,7 +1942,7 @@ a {
     /* 28px - 40px */
     row-gap: clamp(1.75rem, 3vw, 2.5rem);
   }
-  #pricing-975 .cs-menu-group {
+  #playlists .cs-menu-group {
     width: 100%;
     max-width: 37.5rem;
     padding: 0;
@@ -1955,12 +1955,12 @@ a {
     gap: clamp(1.75rem, 3vw, 2.5rem);
     
   }
-  #pricing-975 .playlist{
+  #playlists .playlist{
     background: #ffffff5d;
     padding: 2rem;
     border-radius: 2rem;
   }
-  #pricing-975 .cs-menu-item {
+  #playlists .cs-menu-item {
     list-style: none;
     width: 100%;
     margin: 0;
@@ -1970,7 +1970,7 @@ a {
     justify-content: center;
     gap: 0.5rem;
   }
-  #pricing-975 .cs-h3 {
+  #playlists .cs-h3 {
     width: 100%;
     margin: 0;
     display: flex;
@@ -1979,7 +1979,7 @@ a {
     gap: 1.5rem;
     position: relative;
   }
-  #pricing-975 .cs-h3:before {
+  #playlists .cs-h3:before {
     /* grey line */
     content: "";
     width: 100%;
@@ -1992,7 +1992,7 @@ a {
     left: 0;
     z-index: -1;
   }
-  #pricing-975 .cs-header {
+  #playlists .cs-header {
     /* 20px - 25px */
     font-size: clamp(1.25rem, 2vw, 1.5625rem);
     line-height: 1.2em;
@@ -2003,14 +2003,14 @@ a {
   
     color: var(--headerColor);
   }
-  #pricing-975 .cs-price {
+  #playlists .cs-price {
     font-size: 1rem;
     line-height: 1.5em;
     font-weight: 400;
     padding-left: 0.5rem;
     color: var(--headerColor);
   }
-  #pricing-975 .cs-menu-text {
+  #playlists .cs-menu-text {
     font-size: 1rem;
     line-height: 1.5em;
     text-align: inherit;
@@ -2020,11 +2020,11 @@ a {
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #pricing-975 .cs-menu {
+  #playlists .cs-menu {
     flex-direction: row;
     justify-content: space-between;
   }
-  #pricing-975 .cs-menu-group {
+  #playlists .cs-menu-group {
     width: 100%;
   }
 }
