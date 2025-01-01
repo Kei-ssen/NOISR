@@ -1,4 +1,3 @@
-// HAMBURUGER MENU 
 $(document).ready(function() {
 
     // MENÚ
@@ -62,7 +61,6 @@ $(document).ready(function() {
     var yearActual = fechaActual.getFullYear();
     const nuevoYear = yearActual;
 
-    // Establecer la fecha objetivo al 17 de febrero
     const nuevaFecha = new Date("Feb 17, " + nuevoYear + " 00:00:00");
 
     if (fechaActual > nuevaFecha) {
