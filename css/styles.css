@@ -642,8 +642,9 @@ header{
   max-width: 80rem;
   margin: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
+  flex-direction: column;
 }
 
 .campo {
@@ -698,11 +699,24 @@ header{
   position: relative;
 }
 
-@media only screen and (min-width: 0rem) {
+.buttons2 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: row;
+}
+
+@media only screen and (min-width: 42rem) {
+  .barra {
+    flex-direction: row;
+  }
+}
+
+/* @media only screen and (min-width: 0rem) {
   .searchCont:hover input {
     width: 150px;
   }
-}
+} */
 
 /* SECCIÓN 1 */
 
@@ -1443,6 +1457,11 @@ header{
   font-size: 1rem;
 }
 
+.contador {
+  display: flex;
+  justify-content: center;
+}
+
 /*-- -------------------------- -->
 <---       Side By Side         -->
 <--- -------------------------- -*/
@@ -1460,13 +1479,13 @@ header{
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
-    align-items: start;
+    /* align-items: start; */
     gap: clamp(3rem, 6vw, 4rem);
     padding: 1rem 3rem;
   }
   
   #new1 .cs-image-group {
-    width: 45%;
+    /* width: 45%; */
     height: auto;
     display: block;
     position: relative;
@@ -1487,7 +1506,6 @@ header{
   }
   
   #new1 .cs-content {
-    width: 45%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1498,57 +1516,44 @@ header{
   #new1 .cs-text {
     margin-bottom: 1rem;
   }
-  
+
   #new1 .cs-button-solid {
-    font-size: var(--bodyFontSize);
-    text-decoration: none;
-    font-weight: 700;
-    text-align: center;
-    color: var(--black);
-    padding: 14px 18px;
-    border-radius: 50px;
-    background-color: var(--primary);
-    display: inline-block;
-    box-sizing: border-box;
-    border: 2px solid var(--black);
-    position: relative;
+      font-size: 1rem;
+      /* 46px - 56px */
+      /* line-height: clamp(2.875rem, 5.5vw, 3.5rem); */
+      text-decoration: none;
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+      color: var(--black);
+      min-width: 9.375rem;
+      padding: 14px 18px;
+      border-radius: 2rem;
+      background-color: var(--primary);
+      border: 2px solid var(--black);
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      /* prevents padding from adding to the width */
+      box-sizing: border-box;
   }
-  
-  /* #new1 .cs-button-solid:before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 0%;
-    background: var(--secondaryB);
-    border-radius: 2rem;
-    opacity: 1;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: width 0.3s;
-  }
-  
-  #new1 .cs-button-solid:hover:before {
-    width: 100%;
-  } */
 
   #new1 .cs-button-solid:before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 0%;
-    background-color: var(--secondaryB);
-    border-radius: 50px;
-    opacity: 1;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: width 0.3s;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      background: var(--secondaryB);
+      border-radius: 2rem;
+      opacity: 1;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: width 0.3s;
   }
-  
-  #new1 .cs-button-solid :hover:before {
-    width: 100%;
+
+  #new1 .cs-button-solid:hover:before {
+      width: 100%;
   }
   
   #new1 .cs-list {
@@ -1630,6 +1635,7 @@ header{
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      padding: 0;
   }
 
   #new1 .cs-image-group {
