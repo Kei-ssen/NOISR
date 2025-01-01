@@ -1360,6 +1360,20 @@ header{
   padding-bottom: 2rem;
   transition: 0.3s ease-in-out;
 }
+@media only screen and (max-width: 1024px) {
+  .time {
+    width: 30rem;
+    height: 30rem;
+  }
+
+}
+@media only screen and (max-width: 420px) {
+  .time {
+    width: 20rem;
+    height: 20rem;
+  }
+
+}
 
 .time:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
@@ -1378,7 +1392,11 @@ header{
   font-size: 2rem;
   font-weight: 500;
 }
-
+@media only screen and (max-width: 420px) {
+  .time-unit span {
+    font-size: 0.5rem;
+  }
+}
 .time-unit span {
   font-size: 1rem;
 }
@@ -1386,8 +1404,254 @@ header{
 a {
 
 }
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
 
- /*-- -------------------------- -->
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RPsbs-1097,
+  #RPsbsr-1097 {
+      padding: var(--sectionPadding);
+  }
+  #RPsbs-1097 .cs-container,
+  #RPsbsr-1097 .cs-container {
+      width: 100%;
+      /* changes to 1280px at desktop */
+      max-width: 34.375rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+  }
+  #RPsbs-1097 .cs-content,
+  #RPsbsr-1097 .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: left;
+      width: 100%;
+      max-width: 32.625rem;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: flex-start;
+  }
+
+  #RPsbs-1097 .cs-text,
+  #RPsbsr-1097 .cs-text {
+      margin-bottom: 1rem;
+  }
+  #RPsbs-1097 .cs-text:last-of-type,
+  #RPsbsr-1097 .cs-text:last-of-type {
+      margin-bottom: 2rem;
+  }
+  #RPsbs-1097 .cs-button-solid,
+  #RPsbsr-1097 .cs-button-solid {
+      font-size: 1rem;
+      /* 46px - 56px */
+      line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+      text-decoration: none;
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+      color: #fff;
+      min-width: 9.375rem;
+      padding: 0 1.5rem;
+      border-radius: 2rem;
+      background-color: var(--primary);
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      /* prevents padding from adding to the width */
+      box-sizing: border-box;
+  }
+  #RPsbs-1097 .cs-button-solid:before,
+  #RPsbsr-1097 .cs-button-solid:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      background: #000;
+      border-radius: 2rem;
+      opacity: 1;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: width 0.3s;
+  }
+  #RPsbs-1097 .cs-button-solid:hover:before,
+  #RPsbsr-1097 .cs-button-solid:hover:before {
+      width: 100%;
+  }
+  #RPsbs-1097 .cs-list,
+  #RPsbsr-1097 .cs-list {
+      max-width: 39.375rem;
+      margin: 0 0 2rem 0;
+      padding: 0;
+      /* clips the bullets to create the half circle */
+      overflow: hidden;
+  }
+  #RPsbs-1097 .cs-li,
+  #RPsbsr-1097 .cs-li {
+      list-style: none;
+      margin: 0 0 0.5rem 0;
+      color: var(--bodyTextColor);
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0.75rem;
+      position: relative;
+  }
+  #RPsbs-1097 .cs-li:before,
+  #RPsbsr-1097 .cs-li:before {
+      /* bullet */
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      margin-top: 0.1875rem;
+      /* make it overflow the parent by half it's width to make an eclipse */
+      margin-left: -0.5rem;
+      background: var(--secondary);
+      border-radius: 50%;
+      display: block;
+      /* prevents flexbox from squishing it */
+      flex: none;
+  }
+  #RPsbs-1097 .cs-info,
+  #RPsbsr-1097 .cs-info {
+      width: 100%;
+      padding-top: 2rem;
+      border-top: 1px solid #e8e8e8;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.75rem;
+      position: relative;
+  }
+  #RPsbs-1097 .cs-icon,
+  #RPsbsr-1097 .cs-icon {
+      width: 3.25rem;
+      height: auto;
+      display: block;
+      transition: transform 0.3s;
+  }
+  #RPsbs-1097 .cs-flex,
+  #RPsbsr-1097 .cs-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+  }
+  #RPsbs-1097 .cs-name,
+  #RPsbsr-1097 .cs-name {
+      /* 20px - 25px */
+      font-size: clamp(1.25rem, 4vw, 1.5625rem);
+      line-height: 1.2em;
+      font-weight: 700;
+      margin: 0;
+      color: var(--headerColor);
+      display: block;
+  }
+  #RPsbs-1097 .cs-desc,
+  #RPsbsr-1097 .cs-desc {
+      font-size: 0.875rem;
+      line-height: 1.5em;
+      margin: 0;
+      color: var(--bodyTextColor);
+      display: block;
+  }
+  #RPsbs-1097 .cs-image-group,
+  #RPsbsr-1097 .cs-image-group {
+      /* scales the whole group based on the view width size and stop when that vales equals .789em, resets at desktop */
+      font-size: min(2.09vw, 0.789em);
+      width: 43.375em;
+      height: 43em;
+      display: block;
+      position: relative;
+      z-index: 1;
+  }
+  #RPsbs-1097 .cs-picture,
+  #RPsbsr-1097 .cs-picture {
+      width: 33.875em;
+      height: 38em;
+      position: absolute;
+      bottom: 0;
+      left: 5.5em;
+      z-index: -1;
+  }
+  #RPsbs-1097 .cs-picture img,
+  #RPsbsr-1097 .cs-picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+  }
+  #RPsbs-1097 .cs-graphic,
+  #RPsbsr-1097 .cs-graphic {
+      width: 11.5em;
+      height: auto;
+      display: block;
+      position: absolute;
+      bottom: 5em;
+      right: 0;
+  }
+  
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #RPsbs-1097 .cs-container,
+  #RPsbsr-1097 .cs-container {
+      max-width: 80rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  }
+  #RPsbs-1097 .cs-image-group,
+  #RPsbsr-1097 .cs-image-group {
+      font-size: min(1.2vw, 1em);
+      flex: none;
+  }
+}
+
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #RPsbsr-1097 {
+    background: linear-gradient(89deg, rgba(164, 47, 227, 0.4) 44.46%, rgba(230, 245, 255, 0.2) 78.47%);
+  }
+  #RPsbsr-1097 .cs-title{
+    color: var(--secondary);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #RPsbsr-1097 .cs-picture {
+      right: 5.5em;
+      left: auto;
+  }
+  #RPsbsr-1097 .cs-stripes {
+      right: 0;
+      left: auto;
+  }
+  #RPsbsr-1097 .cs-graphic {
+      left: 0;
+      right: auto;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #RPsbsr-1097 .cs-image-group {
+      /* sends it to the right in the 2nd position */
+      order: 2;
+  }
+}
+
+
+/*-- -------------------------- -->
 <---         CATEGORIES           -->
 <--- -------------------------- -*/
 
@@ -1632,3 +1896,4 @@ a {
     left: 50%;
   }
 }
+

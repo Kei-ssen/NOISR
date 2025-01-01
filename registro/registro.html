@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>PHP - Ejemplo 6 - Registro</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Manuale|Montserrat+Alternates&display=swap" rel="stylesheet">
+    <link href="../css/registro.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/registro.js"></script>
+</head>
+
+<body>
+    <!-- Además del action y el method, ahora añadimos un nuevo atributo
+             que es onSubmit. Solo se ejecutará cuando el usuario le de al botón
+             de crear usuario. Cuando lo pulse, se ejecutará la función de JavaScript
+             validate(), que devuelve verdadero (true) en el caso de que la contraseña
+             y su repetición sean iguales y falso (false) en el caso de que no
+             coincidan. Si devuelve true, se envía el formulario a la página
+             indicada en action. Si devuelve false, no se ejecutará el action -->
+    <header>
+        <h1>PHP. Ejemplo 6. Registro</h1>
+    </header>
+    <main>
+        <p class="instrucciones">Es obligatorio rellenar todos los campos del formulario salvo la imagen, que no podrá exceder de un tamaño máximo. Se comprueba si las dos contraseñas coinciden a través de JavaScript antes de enviar el formulario al servidor.</p>
+        <form onSubmit="return validate()" action="registro.php" method="post" enctype="multipart/form-data">
+            <label for="id">Identificador</label>
+            <input type="text" id="id" name="id" placeholder="Identificador" required>
+            <label for="pass1">Contraseñ</label>
+            <input type="password" id="pass1" name="pass1" placeholder="Contraseña" required>
+            <label for="pass2">Repita la contraseña</label>
+            <input type="password" id="pass2" name="pass2" placeholder="Repetición de la contraseña" required>
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+            <label for="foto">Foto</label>
+            <!-- Tamaño máximo de la foto -->
+            <input type="hidden" name="MAX_FILE_SIZE" value="300000">
+            <input type="file" id="foto" name="foto">
+            <input type="submit" value="Registrar usuario">
+        </form>
+        <p id="oculto" class="error">Las contraseñas no coinciden</p>
+    </main>
+</body>
+
+</html>

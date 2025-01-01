@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #444;
+    text-align: center;
+}
+
+header > h1 {
+    margin: 1.5em auto;
+    font-family: 'Manuale', serif;
+    color: teal;
+}
+
+main {
+    width: 20em;
+    margin: auto;
+}
+
+label {
+    display: none;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+    width: 100%;
+    display: block;
+    border: 2px solid gainsboro;
+    border-radius: 3px;
+    margin: 0.5em auto;
+    padding: 5px;
+    height: 2.5em;
+    text-align: left;
+}
+
+input[type=submit] {
+    width: 50%;
+    display: block;
+    margin: 5em auto;
+    color: teal;
+    font-weight: bold;
+    margin-top: 3em;
+    padding: 1em;
+    border: teal 1px solid;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 2px 2px 1px grey;
+}
+
+p {
+    margin: 0.5em 0;
+}
+
+.instrucciones {
+    margin: 2em auto;
+}
+
+.error {
+    font-weight: bold;
+    color: crimson;
+}
+
+p > a:hover {
+    font-weight: bold;
+}
+
+p#oculto {
+    display: none;
+}
+
+figure {
+    width: 80%;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
