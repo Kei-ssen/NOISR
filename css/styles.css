@@ -1411,8 +1411,8 @@ header{
   justify-content: center;
   color: var(--black);
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.4) 60%), url(../media/new/new1.jpg);
-  width: 38rem;
-  height: 38rem;
+  width: 30rem;
+  height: 30rem;
   border-radius: 1.8rem;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1473,13 +1473,15 @@ header{
 @media only screen and (min-width: 0rem) {
   /* Aplica los estilos a .new1, .new2 y .new3 */
   .new1, .new3 {
-    padding: var(--sectionPadding);
-    background: linear-gradient(89deg, rgba(164, 47, 227, 0.4) 44.46%, rgba(230, 245, 255, 0.2) 78.47%);
+    /* padding: var(--sectionPadding); */
+    /* background: linear-gradient(89deg, rgba(164, 47, 227, 0.4) 44.46%, rgba(230, 245, 255, 0.2) 78.47%); */
+    background: linear-gradient(89deg, var(--primaryB), rgba(230, 245, 255, 1));
   }
 
   .new2 {
-    padding: var(--sectionPadding);
-    background: linear-gradient(89deg, rgba(230, 245, 255, 0.2) 44.46%, rgba(164, 47, 227, 0.4) 78.47%);
+    /* padding: var(--sectionPadding); */
+    /* background: linear-gradient(89deg, rgba(230, 245, 255, 0.2) 44.46%, rgba(164, 47, 227, 0.4) 78.47%); */
+    background: linear-gradient(89deg, rgba(230, 245, 255, 1), var(--primaryB));
   }
 
   .new1 .title, .new2 .title, .new3 .title {
@@ -1524,7 +1526,7 @@ header{
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .new1 .text, .new2 .text, .new3 .text {
@@ -1570,7 +1572,7 @@ header{
 
   .new1 .list, .new2 .list, .new3 .list {
     max-width: 39.375rem;
-    margin: 0 0 2rem 0;
+    /* margin: 0 0 2rem 0; */
     padding: 0;
     overflow: hidden;
   }
@@ -1669,6 +1671,9 @@ header{
   top: 0;
   transition: transform 0.3s ease-out;
   will-change: transform;
+  height: 100vh;
+  padding: 3.5rem 1rem;
+  display: flex;
 }
 
 .new1 {
