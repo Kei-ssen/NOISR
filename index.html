@@ -926,6 +926,49 @@
                 </div>
             </div>
         </section>
+
+        <!-- FORMULARIO -->
+        <section id="formulario">
+            <div class="formSect">
+                <div class="formText">
+                    <h2 class="title">
+                        <span class="dreamText">Got music?</span>
+                        <br>Get in touch!
+                    </h2>
+                    <span class="topper">Whether you're an artist ready to share your sound or a subscriber with feedback, we're here to connect!</span>
+                    <h2 class="title">
+                </div>
+                <form class="formulario">
+                    <div class="input-box">
+                        <input type="text" id="nombre" placeholder="Full Name">
+                        <i class="fa-solid fa-user"></i>
+                    </div>       
+                    <div class="input-box">
+                        <input type="email" id="correo" placeholder="Email Address">
+                        <i class="fa-solid fa-at"></i>
+                    </div>
+                    <div class="promociones">
+                        <input type="checkbox" id="promociones" name="promociones" value="promotions">
+                        <label for="promociones">I agree to the terms and conditions.</label>
+                    </div>
+                    <p class="warnings"></p>
+                    <button class="submit efecto">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- VENTAN MODAL -->
+        <div id="overlay" style="display: none;"></div>
+
+        <div id="modalWindow" style="display: none;">
+            <div class="modal-content">
+                <h3>Form submitted successfully</h3>
+                <p>We will get in touch with you as soon as possible. Thank you very much.</p>
+                <button class="aceptar efecto">Close</button>
+            </div>
+        </div>
+
+
                                         
         <!-- PHP -->
 

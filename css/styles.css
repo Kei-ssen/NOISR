@@ -527,6 +527,7 @@ header.hide {
   transition: 0.3s ease-in-out;
   z-index: 3;
   position: relative;
+  transition: 0.3s ease-in-out;
 }
 
 .dreamNoise-btn:before {
@@ -995,6 +996,7 @@ header.hide {
   }
   #section1 .intro:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease-in-out;
   }
   #section1 .intro .topper {
     color: var(--primary);
@@ -1564,12 +1566,13 @@ header.hide {
     min-width: 9.375rem;
     padding: 14px 18px;
     border-radius: 2rem;
-    background-color: var(--primary);
+    background-color: var(--primaryB);
     border: 2px solid var(--black);
     display: inline-block;
     position: relative;
     z-index: 1;
     box-sizing: border-box;
+    transition: 0.3s ease-in-out;
   }
 
   .new1 .button-solid:before, .new2 .button-solid:before, .new3 .button-solid:before {
@@ -1995,6 +1998,271 @@ header.hide {
   }
 }
 
+/* FORMULARIO */
+
+/* Tablet - 768px */
+@media only screen and (min-width: 0rem) {
+  #formulario {
+    /* padding: var(--sectionPadding); */
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 1rem 3rem 1rem;
+  }
+  
+  #formulario .formSect {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: clamp(3rem, 6vw, 4rem); */
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 1.8rem;
+    padding: 3rem;
+    transition: 0.3s ease-in-out;
+  }
+
+  #formulario .formSect:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease-in-out;
+  }
+  
+  #formulario .formText {
+    width: 100%;
+  }
+
+  #formulario .topper {
+    color: var(--primary);
+  }
+  
+  #formulario .formulario {
+    width: 100%;
+  }
+  
+  #formulario .fomulario {
+    width: 55%;
+    /* max-width: 46.3125rem; */
+    flex: none;
+    max-width: 52.5rem;
+  }
+  
+  #formulario .formulario .input-box {
+    position: relative;
+    width: 100%;
+    margin: 15px 0;
+  }
+  
+  #formulario .formulario .input-box input {
+    width: 100%;
+    height: 40px;
+    border: 2px solid var(--black);
+    border-radius: 50px;
+    font-size: 14px;
+    color: var(--black);
+    padding: 1rem 2rem 1rem 1rem;
+    outline: none;
+    font-size: 1rem;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+  }
+
+  #formulario .formulario .input-box input:hover {
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  }
+
+  #formulario .formulario .input-box input:focus {
+    /* transition: 0.3s ease-in-out; */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  }
+  
+  #formulario .formulario .input-box input::placeholder {
+    color: var(--black);
+  }
+  
+  #formulario .formulario .input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: var(--black);
+  }
+  
+  #formulario .formulario .promociones {
+    display: flex;
+    justify-content: left;
+    margin: 0.5rem 0;
+  }
+  
+  #formulario .formulario .promociones label {
+    color: var(--black);
+    font-size: 1rem;
+    padding-left: 0.5rem;
+  }
+  
+  #formulario .formulario .promociones input {
+    margin-right: 5px;
+    accent-color: rgb(25, 46, 66);
+  }
+  
+  #formulario .formulario .submit {
+    margin-top: 1.5rem;
+    background-color: var(--primaryB);
+    color: var(--black);
+    padding: 10px 18px;
+    border: 2px solid var(--black);
+    border-radius: 50px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    transition: 0.3s ease-in-out;
+  }
+
+  #formulario .formulario .submit:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      background-color: var(--secondaryB);
+      border-radius: 50px;
+      opacity: 1;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: width 0.3s;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  }
+
+  #formulario .formulario .submit:hover:before {
+      width: 100%;
+  }
+
+  .warnings {
+    text-align: start;
+    margin: 0.5rem 0 1rem 0;
+    font-style: italic;
+    color: var(--primary);
+  }
+
+  /* VENTANA MODAL */
+  #modalWindow {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    overflow: auto;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+    border: 2px var(--black) solid;
+    background-color: var(--white);
+    border-radius: 1.8rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #modalWindow.show-modal {
+    display: flex;
+    opacity: 1;
+  }
+
+  #modalWindow .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #modalWindow h3 {
+    padding-bottom: 0.5rem;
+  }
+
+  #modalWindow .aceptar {
+    margin-top: 1.5rem;
+    background-color: var(--secondaryB);
+    color: var(--black);
+    padding: 10px 18px;
+    border: 2px solid var(--black);
+    border-radius: 50px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    transition: 0.3s ease-in-out;
+  }
+
+  #modalWindow .aceptar:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: var(--primaryB);
+    border-radius: 50px;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+#modalWindow .aceptar:hover:before {
+    width: 100%;
+}
+
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 62rem) {
+  #formulario .formSect {
+    flex-direction: row;
+    gap: 4rem;
+  }
+  
+  #formulario .formText {
+    width: 40%;
+  }
+  
+  #formulario .formulario {
+    width: 60%;
+  }
+
+  /* #modalWindow {
+    width: 40%;
+    height: 30%;
+  } */
+}
+
+
 
 
 /* FOOTER */
@@ -2047,6 +2315,7 @@ header.hide {
       padding-right: 1rem;
       border-radius: 50px;
       position: relative;
+      transition: 0.3s ease-in-out;
   }
   #footer .li:before {
     content: "";
@@ -2186,7 +2455,7 @@ header.hide {
 
 /* PÁGINA ERROR 404 */
 .error {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2199,6 +2468,7 @@ header.hide {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 1rem;
 }
 
 .error::before {
@@ -2208,8 +2478,6 @@ header.hide {
   left: 0;
   right: 0;
   bottom: 0;
-  /* background-image: url("../media/header-img.webp");
-  background-size: cover; */
   filter: blur(8px);
   z-index: -1;
 }
@@ -2220,7 +2488,11 @@ header.hide {
   align-items: center;
   flex-direction: column;
   z-index: 1;
-  /* text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.8); */
+}
+
+.errorCont h3 {
+  padding-bottom: 1rem;
+  font-size: clamp(1.25rem, 2vw, 1.5625rem);
 }
 
 .errorCont p {
@@ -2228,14 +2500,17 @@ header.hide {
 }
 
 .errorCont i {
-  font-size: 1.7rem;
+  font-size: 2rem;
   padding-top: 1rem;
+  color: var(--primary);
 }
 
 .line {
   position: absolute;
   bottom: 7rem;
-  width: 100%;
+  left: 0;
+  width: calc(100% - 2rem);
+  margin-left: 1rem;
   border-top: 2px solid var(--black);
   z-index: 0;
 }
@@ -2256,5 +2531,32 @@ header.hide {
   position: absolute;
   bottom: 0;
   margin-bottom: 2rem;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-volver:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  background-color: var(--secondaryB);
+  border-radius: 50px;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: width 0.3s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.btn-volver:hover:before {
+  width: 100%;
+}
+
+@media (max-width: 670px) {
+
+  .errorCont p {
+      width: 75%;
+  }
 }
                               

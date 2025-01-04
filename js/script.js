@@ -53,14 +53,14 @@ $(document).ready(function() {
 
     // MODO CLARO/OSCURO
     $("#to-dark-mode").click(function() {
-        $("#section1 .item, #section1 .intro, .artistTop-grid, #albumes .container, #artists .container").css("background-color", "rgba(0, 0, 0, 0.2)");
+        $("#section1 .item, #section1 .intro, .artistTop-grid, #albumes .container, #artists .container, #formulario .formSect").css("background-color", "rgba(0, 0, 0, 0.2)");
 
         $("#to-light-mode").removeClass("hide-cont");
         $("#to-dark-mode").addClass("hide-cont");
     });
 
     $("#to-light-mode").click(function() {
-        $("#section1 .item, #section1 .intro, .artistTop-grid, #albumes .container, #artists .container").css("background-color", "rgba(255, 255, 255, 0.4)");
+        $("#section1 .item, #section1 .intro, .artistTop-grid, #albumes .container, #artists .container, #formulario .formSect").css("background-color", "rgba(255, 255, 255, 0.4)");
 
         $("#to-dark-mode").removeClass("hide-cont");
         $("#to-light-mode").addClass("hide-cont");
@@ -191,6 +191,70 @@ $(document).ready(function() {
     initializeParticles("particles-js-1", "#a42fe3");
     initializeParticles("particles-js-2", "#ffe571");
     initializeParticles("particles-js-3", "#a42fe3");
-      
+    
+    // VALIDAR FORM
+    // VALIDAR FORMULARIO
+    $(".formulario").submit(function(e) {
+        e.preventDefault();
+
+        let warnings = "";
+        let entrar = false;
+
+        const nombre = $("#nombre").val();
+        const correo = $("#correo").val();
+        const promociones = $("#promociones").is(":checked");
+
+        if (nombre.trim() === "") {
+            warnings = "Name is required.";
+            entrar = true;
+        }
+        
+        if (!entrar && correo.trim() === "") {
+            warnings = "Email is required.";
+            entrar = true;
+        } else if (!entrar && !correo.includes("@")) {
+            warnings = "Email must contain an '@'.";
+            entrar = true;
+        }
+
+        if (!entrar && !promociones) {
+            warnings = "You must accept the terms and conditions.";
+            entrar = true;
+        }
+
+        if (entrar) {
+            $(".warnings").html(warnings);
+        } else {
+            showModal();
+        }
+    });
+
+
+    // MODAL
+    function showModal() {
+        $("#overlay").fadeIn(200);
+        $("#modalWindow").fadeIn(200).addClass("show-modal");
+    }
+
+    $(".aceptar").click(function() {
+        closeModal();
+    });
+
+    $("#overlay").click(function() {
+        closeModal();
+    });
+
+    function closeModal() {
+        $("#overlay").fadeOut(200);
+        $("#modalWindow").fadeOut(200).removeClass("show-modal");
+
+        // RESTABLECER
+        $("#nombre").val("");
+        $("#correo").val("");
+        $("#promociones").prop("checked", false);
+
+        // OCULTAR WARNINGS
+        $(".warnings").html("");
+    }
 });
 
