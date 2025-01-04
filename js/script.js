@@ -205,20 +205,20 @@ $(document).ready(function() {
         const promociones = $("#promociones").is(":checked");
 
         if (nombre.trim() === "") {
-            warnings = "Name is required.";
+            warnings = "Name is required";
             entrar = true;
         }
         
         if (!entrar && correo.trim() === "") {
-            warnings = "Email is required.";
+            warnings = "Email is required";
             entrar = true;
         } else if (!entrar && !correo.includes("@")) {
-            warnings = "Email must contain an '@'.";
+            warnings = "Email must contain an '@'";
             entrar = true;
         }
 
         if (!entrar && !promociones) {
-            warnings = "You must accept the terms and conditions.";
+            warnings = "You must accept the terms and conditions";
             entrar = true;
         }
 
