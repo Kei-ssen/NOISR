@@ -442,7 +442,7 @@ header.hide {
   transition: transform 0.3s ease-in-out;
 }
 
-@media(max-width: 900px){
+@media(max-width: 1150px){
     header{
         .menu{
             .navbar{
@@ -651,6 +651,20 @@ header.hide {
   justify-content: flex-start;
   flex-direction: column;
   padding: 2rem 1rem 1rem 1rem;
+}
+
+@media only screen and (min-width: 81.25rem) {
+  .barra {
+    gap: 20px;
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 2rem 1rem 1rem 0;
+  }
 }
 
 .campo {
@@ -953,7 +967,13 @@ header.hide {
     align-items: center;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transition: 0.3s ease-in-out;
     /* margin: 0 auto; */
+  }
+  #section1 .play:hover,
+  #section1 .pause:hover  {
+    color: var(--primary);
+    transition: 0.3s ease-in-out;
   }
 
   /* INTRO */
@@ -1559,7 +1579,7 @@ header.hide {
   .new1 .button-solid, .new2 .button-solid, .new3 .button-solid {
     font-size: 1rem;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 500;
     text-align: center;
     margin: 0;
     color: var(--black);
@@ -1942,7 +1962,7 @@ header.hide {
     background-color: rgba(255, 255, 255, 0.4);
     transition: box-shadow 0.3s ease-in-out;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem;
+    padding: 0.5rem 3rem;
     border-radius: 1.8rem;
     width: 100%;
   }
@@ -1954,7 +1974,7 @@ header.hide {
     text-align: left;
     list-style: none;
     width: 100%;
-    max-width: 52.5rem;
+    /* max-width: 52.5rem; */
     /* 16px - 24px */
     /* padding: clamp(0.5rem, 3vw, 1rem); */
     padding-right: 1rem;
@@ -1977,6 +1997,36 @@ header.hide {
     /* 16px - 24px */
     padding: 1rem;
     box-sizing: border-box;
+  }
+  #playlists .listen {
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    max-width: 52.5rem;
+    /* 16px - 24px */
+    /* padding: 1rem; */
+    box-sizing: border-box;
+  }
+  #playlists .listenCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  #playlists .playlistPlay,
+  #playlists .playlistPause,
+  #playlists .playlistRandom {
+    font-size: 2rem;
+    color: var(--primary);
+    margin: 0.5rem;
+    transition: 0.3s ease-in-out;
+  }
+  #playlists .playlistPlay:hover,
+  #playlists .playlistPause:hover,
+  #playlists .playlistRandom:hover {
+    color: var(--secondary);
+    transition: 0.3s ease-in-out;
   }
   #playlists .h3Name {
     /* 20px - 25px */
@@ -2058,11 +2108,11 @@ header.hide {
   #playlists .buttonListen {
     font-size: 1rem;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 500;
     text-align: center;
-    margin-top: 1rem;
+    margin: 1rem;
     color: var(--black);
-    min-width: 9.375rem;
+    min-width: 7rem;
     padding: 14px 18px;
     border-radius: 2rem;
     background-color: var(--secondaryB);
@@ -2116,25 +2166,37 @@ header.hide {
     display: flex;
     flex-direction: row;
   }
-  #playlists .play,
-  #playlists .pause  {
+  #playlists .play2,
+  #playlists .pause2  {
     font-size: 1.5rem;
     color: var(--secondary);
     display: flex;
     align-items: center;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transition: 0.3s ease-in-out;
     /* margin: 0 auto; */
   }
+  #playlists .play2:hover,
+  #playlists .pause2:hover  {
+    color: var(--primary);
+    transition: 0.3s ease-in-out;
+  }
 }
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
+
+@media only screen and (min-width: 64rem) {
   #playlists .menu {
     flex-direction: row;
     /* justify-content: space-between; */
   }
   #playlists .menu-group {
     width: 100%;
+  }
+  #playlists .item {
+    max-width: 52.5rem;
+  }
+  #playlists .playlist{
+    padding: 0.5rem;
   }
 }
 
@@ -2579,7 +2641,7 @@ header.hide {
 }
 
 /* Tablet - 768px */
-@media only screen and (min-width: 62rem) {
+@media only screen and (min-width: 54rem) {
   #footer .top {
       flex-direction: row;
       justify-content: space-between;

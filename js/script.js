@@ -20,7 +20,7 @@ $(document).ready(function() {
         previousScroll = currentPosition <= 0 ? 0 : currentPosition;
     });
 
-    // PLAY/PAUSA REPRODUCTOR MÚSICA
+    // PLAY/PAUSA REPRODUCTOR MÚSICA 1
     $('.play').on('click', function() {
         var $li = $(this).closest('li');
         var audio = $li.find('audio')[0];
@@ -51,16 +51,234 @@ $(document).ready(function() {
         playButton.show();
     });
 
+    // PLAY/PAUSA REPRODUCTOR MÚSICA 2
+    // let audioActual = null;
+    // let Random = false; 
+    // let audioRandom = null;
+
+    // $('.playlistPlay').on('click', function() {
+    //     let audio = $('.menu-group li:nth-child(2) .audioPlayer2')[0];
+
+    //     if (audio) {
+    //         audio.currentTime = 0;
+    //         audio.play();
+
+    //         $(this).hide();
+    //         $(this).siblings('.playlistPause').show();
+
+    //         $('.menu-group li:nth-child(2) .fa-play').hide();
+    //         $('.menu-group li:nth-child(2) .fa-pause').show();
+
+    //         audioActual = audio;
+
+    //         $('.playlistRandom').hide();
+    //     }
+    // });
+
+    // $('.playlistPause').on('click', function() {
+    //     if (audioActual) {
+    //         audioActual.pause();
+    //         audioActual.currentTime = 0;
+    //         $(this).hide();
+    //         $(this).siblings('.playlistPlay').show();
+
+    //         $('.playlistRandom').show();
+
+    //         if (Random && audioRandom) {
+    //             audioRandom.pause();
+    //             audioRandom.currentTime = 0;
+    //             Random = false;
+    //             audioRandom = null;
+    //         }
+
+    //         $('.fa-pause').hide();
+    //         $('.fa-play').show();
+    //     }
+    // });
+
+    // $('.playlistRandom').on('click', function() {
+    //     if (Random) return;
+
+    //     $(this).hide();
+    //     $('.playlistPause').show();
+    //     $('.playlistPlay').hide();
+
+    //     let randomItem = $('.menu-group li').not(':first').not(':last').has('audio').eq(Math.floor(Math.random() * ($('.menu-group li').length - 2)));
+    //     audioRandom = randomItem.find('.audioPlayer2')[0];
+
+    //     if (audioRandom) {
+    //         audioRandom.play();
+
+    //         randomItem.find('.fa-play').hide();
+    //         randomItem.find('.fa-pause').show();
+
+    //         Random = true;
+    //     }
+    // });
+
+    // $('.playlistPause').on('click', function() {
+    //     if (Random && audioRandom) {
+    //         audioRandom.pause();
+    //         audioRandom.currentTime = 0;
+    //         Random = false;
+    //         audioRandom = null;
+
+    //         $('.playlistRandom').show();
+
+    //         $('.fa-pause').hide();
+    //         $('.fa-play').show();
+    //     }
+    // });
+
+    // $('.play2').on('click', function() {
+    //     var $li = $(this).closest('li');
+    //     var audio = $li.find('audio')[0];
+    //     var playButton = $li.find('.play2');
+    //     var pauseButton = $li.find('.pause2');
+    
+    //     $('audio').each(function() {
+    //         if (!$(this).is(audio)) {
+    //             this.pause();
+    //             $(this).closest('li').find('.play2').show();
+    //             $(this).closest('li').find('.pause2').hide();
+    //         }
+    //     });
+    
+    //     audio.play();
+    //     playButton.hide();
+    //     pauseButton.show();
+    // });
+    
+    // $('.pause2').on('click', function() {
+    //     var $li = $(this).closest('li');
+    //     var audio = $li.find('audio')[0];
+    //     var playButton = $li.find('.play2');
+    //     var pauseButton = $li.find('.pause2');
+    
+    //     audio.pause();
+    //     pauseButton.hide();
+    //     playButton.show();
+    // });
+
+    let audioActual = null;
+    let Random = false; 
+    let audioRandom = null;
+
+    $('.playlistPlay').on('click', function() {
+        var $playlist = $(this).closest('.menu-group');
+        var $li = $playlist.find('li').eq(1);
+        var audio = $li.find('.audioPlayer2')[0];
+
+        if (audio) {
+            audio.currentTime = 0;
+            audio.play();
+
+            $(this).hide();
+            $(this).siblings('.playlistPause').show();
+
+            $li.find('.fa-play').hide();
+            $li.find('.fa-pause').show();
+
+            audioActual = audio;
+
+            $playlist.find('.playlistRandom').hide();
+        }
+    });
+
+    $('.playlistPause').on('click', function() {
+        var $playlist = $(this).closest('.menu-group');
+        var $li = $playlist.find('li').eq(1);
+
+        if (audioActual) {
+            audioActual.pause();
+            audioActual.currentTime = 0;
+            $(this).hide();
+            $(this).siblings('.playlistPlay').show();
+
+            $li.find('.fa-pause').hide();
+            $li.find('.fa-play').show();
+
+            $playlist.find('.playlistRandom').show();
+        }
+    });
+
+    $('.playlistRandom').on('click', function() {
+        if (Random) return;
+
+        var $playlist = $(this).closest('.menu-group');
+        $(this).hide();
+        $playlist.find('.playlistPause').show();
+        $playlist.find('.playlistPlay').hide();
+
+        let randomItem = $playlist.find('li').not(':first').not(':last').has('audio').eq(Math.floor(Math.random() * ($playlist.find('li').length - 2)));
+        audioRandom = randomItem.find('.audioPlayer2')[0];
+
+        if (audioRandom) {
+            audioRandom.play();
+
+            randomItem.find('.fa-play').hide();
+            randomItem.find('.fa-pause').show();
+
+            Random = true;
+        }
+    });
+
+    $('.playlistPause').on('click', function() {
+        if (Random && audioRandom) {
+            audioRandom.pause();
+            audioRandom.currentTime = 0;
+            Random = false;
+            audioRandom = null;
+
+            var $playlist = $(this).closest('.menu-group');
+            $playlist.find('.playlistRandom').show();
+            $playlist.find('.fa-pause').hide();
+            $playlist.find('.fa-play').show();
+        }
+    });
+
+    $('.play2').on('click', function() {
+        var $li = $(this).closest('li');
+        var audio = $li.find('audio')[0];
+        var playButton = $li.find('.play2');
+        var pauseButton = $li.find('.pause2');
+        var $playlist = $li.closest('.menu-group');
+
+        $playlist.find('audio').each(function() {
+            if (!$(this).is(audio)) {
+                this.pause();
+                $(this).closest('li').find('.play2').show();
+                $(this).closest('li').find('.pause2').hide();
+            }
+        });
+
+        audio.play();
+        playButton.hide();
+        pauseButton.show();
+    });
+
+    $('.pause2').on('click', function() {
+        var $li = $(this).closest('li');
+        var audio = $li.find('audio')[0];
+        var playButton = $li.find('.play2');
+        var pauseButton = $li.find('.pause2');
+
+        audio.pause();
+        pauseButton.hide();
+        playButton.show();
+    });
+
+
     // MODO CLARO/OSCURO
     $("#to-dark-mode").click(function() {
-        $("#section1 .item, #section1 .intro, .artistTop-grid, #albumes .container, #artists .container, #formulario .formSect").css("background-color", "rgba(0, 0, 0, 0.2)");
+        $("#section1 .item, #section1 .intro, .artistTop-grid, #albumes .container, #artists .container, #formulario .formSect, #playlists .playlist, #playlists .item").css("background-color", "rgba(0, 0, 0, 0.2)");
 
         $("#to-light-mode").removeClass("hide-cont");
         $("#to-dark-mode").addClass("hide-cont");
     });
 
     $("#to-light-mode").click(function() {
-        $("#section1 .item, #section1 .intro, .artistTop-grid, #albumes .container, #artists .container, #formulario .formSect").css("background-color", "rgba(255, 255, 255, 0.4)");
+        $("#section1 .item, #section1 .intro, .artistTop-grid, #albumes .container, #artists .container, #formulario .formSect, #playlists .playlist, #playlists .item").css("background-color", "rgba(255, 255, 255, 0.4)");
 
         $("#to-dark-mode").removeClass("hide-cont");
         $("#to-light-mode").addClass("hide-cont");
