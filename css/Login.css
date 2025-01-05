@@ -225,7 +225,7 @@
   }
 
   /* ------- */
-header >.title {
+  header >.title {
     margin: 1.5em auto;
     padding-top: 6rem;
 }
@@ -251,8 +251,7 @@ label {
 }
 
 input[type=text],
-input[type=password],
-input[type=email] {
+input[type=password] {
     width: 100%;
     display: block;
     border: 2px solid var(--black);
@@ -282,11 +281,6 @@ input[type=submit]:hover {
     background-color: var(--secondaryB);
     transition: .5s;
 }
-
-#foto {
-    padding: 1rem 0rem 1rem 0rem;
-}
-
 p {
     margin: 0.5em 0;
 }
@@ -299,23 +293,3 @@ p {
     font-weight: bold;
     color: crimson;
 }
-
-p > a:hover {
-    font-weight: bold;
-}
-
-p#oculto {
-    display: none;
-}
-
-figure {
-    width: 80%;
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-}
-
-img {
-    width: 100%;
-}
-
