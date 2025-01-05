@@ -281,6 +281,7 @@ input[type=submit]:hover {
     background-color: var(--secondaryB);
     transition: .5s;
 }
+
 p {
     margin: 0.5em 0;
 }
