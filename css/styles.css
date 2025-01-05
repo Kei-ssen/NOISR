@@ -2671,6 +2671,10 @@ header.hide {
   }
   #discover .title {
     max-width: 20ch;
+    color: var(--secondaryB);
+  }
+  #discover .topper {
+    color: var(--primary);
   }
   #discover .text {
     max-width: 40rem;
@@ -2722,6 +2726,7 @@ header.hide {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 16rem;
   }
   #discover .picture {
     width: 100%;
@@ -2885,11 +2890,12 @@ header.hide {
   }
 
   #artist-profile .topper {
-      color: #767676;
+      color: var(--primary);
   }
   #artist-profile .title {
       /* 23 characters wide including spaces */
       max-width: 26ch;
+      color: var(--secondaryB);
   }
   #artist-profile .text {
       margin-bottom: 1rem;
@@ -2911,11 +2917,9 @@ header.hide {
       list-style: none;
       /* 16px - 24px */
       padding: clamp(1rem, 3vw, 1.5rem);
-      /* prevents padding from affecting height and width */
       box-sizing: border-box;
-      background-color: #f7f7f7;
+      background-color: rgba(255, 255, 255, 0.4);
       border-radius: 1rem;
-      border: 1px solid #e8e8e8;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -2978,10 +2982,10 @@ header.hide {
       font-weight: 700;
       overflow: hidden;
       margin: 0;
-      color: #fff;
+      color: var(--black);
       padding: 0 3rem;
-      border-radius: 1.875rem;
-      background-color: var(--primary);
+      border-radius: 2rem;
+      border: var(--black) solid 2px;
       display: inline-block;
       position: relative;
       z-index: 1;
@@ -2993,7 +2997,7 @@ header.hide {
       display: block;
       height: 100%;
       width: 0%;
-      background: #1a1a1a;
+      background: var(--secondaryB);
       opacity: 1;
       top: 0;
       left: 0;
@@ -3001,7 +3005,7 @@ header.hide {
       transition: width 0.3s;
   }
   #artist-profile .button-solid:hover {
-      color: var(--primary);
+      color: var(--black);
   }
   #artist-profile .button-solid:hover:before {
       width: 100%;
