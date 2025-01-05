@@ -2068,7 +2068,7 @@ header.hide {
   
   }
   #playlists .groupText {
-    margin-left: 0.5rem;
+    margin: 0.5rem;
   }
   #playlists p {
     color: var(--black);
