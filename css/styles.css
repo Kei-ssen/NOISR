@@ -856,7 +856,7 @@ header.hide {
     position: absolute;
     top: 0;
     left: 0;
-    transition: transform 0.6s, opacity 0.3s;
+    /* transition: 0.3s ease-in-out; */
     border-radius: 1.2rem;
   }
 
@@ -1795,7 +1795,7 @@ header.hide {
   }
   
   #artists .picture img:hover {
-    transform: scale(1.1) rotate(7deg);
+    transform: scale(1.2) rotate(7deg);
   }
 }
 /* In Between - 600px */
@@ -1959,8 +1959,8 @@ header.hide {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
-    color: var(--primary);
+    margin: 2rem 1rem 1rem 1rem;
+    color: var(--black);
   }
   #playlists .link {
     text-decoration: none;
