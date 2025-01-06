@@ -5,6 +5,10 @@ $(document).ready(function() {
         $('.nav-links').toggleClass('active');
     });
 
+    $('.nav-links li a').click(function(){
+        $('.nav-links').removeClass('active');
+    });
+
     // HIDE EL MENÚ
     let previousScroll = 0;
 
