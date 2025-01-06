@@ -1187,6 +1187,7 @@ header.hide {
       /* 48px - 64px */
       gap: 1rem;
       background-color: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       border-radius: 1.8rem;
       padding: 3rem 3rem 6rem 3rem;
       transition: 0.3s ease-in-out;
@@ -1420,12 +1421,15 @@ header.hide {
 
 .time {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.4) 60%), url(../media/new/new1.jpg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 .time2 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.4) 60%), url(../media/new/new2.jpg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 .time3 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.4) 60%), url(../media/new/new3.jpg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -1701,6 +1705,7 @@ header.hide {
     /* 48px - 64px */
     gap: 1rem;
     background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 1.8rem;
     padding: 3rem 3rem 6rem 3rem;
     transition: 0.3s ease-in-out;
@@ -2136,6 +2141,7 @@ header.hide {
     align-items: center;
     gap: 1rem;
     background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 1.8rem;
     padding: 3rem;
     transition: 0.3s ease-in-out;
