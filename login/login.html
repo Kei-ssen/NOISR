@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>PHP - Ejemplo 3</title>
+    <title>Log In</title>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Manuale|Montserrat+Alternates&display=swap" rel="stylesheet">
     <link href="../css/Login.css" rel="stylesheet" type="text/css">
@@ -40,13 +40,14 @@
              y a comprobar que son corretos.
              En method pondremos siempre post en los formularios -->
     <header>
-        <div class="title">
-            <a href="#" class="logo">NOISR</a>
+        <div class="title container">
+            <a href="../index.html" class="logo">NOISR</a>
             <img src="../media/logo.png" alt="" class="logoIcono">
         </div>
     </header>
     <main>
-        <p class="instrucciones">Se comprobará si el identificador y la contraseña del usuario existen en la base de datos. Además, en la página principal, se mostrará el identificador del usuario.</p>
+        <!-- Se comprobará si el identificador y la contraseña del usuario existen en la base de datos. Además, en la página principal, se mostrará el identificador del usuario -->
+        <p class="instrucciones">Log in and start listening NOW!</p>
         <form action="control.php" method="post">
             <label for="id">Identificador</label>
             <input type="text" id="id" name="id" placeholder="Identificador">

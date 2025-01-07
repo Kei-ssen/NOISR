@@ -2796,6 +2796,11 @@ header.hide {
 @media only screen and (min-width: 48rem) {
   #discover .container {
     max-width: 80rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  #discover .container:hover {
+    max-width: 80rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
   #discover .content {
     flex-direction: row;
@@ -2868,7 +2873,7 @@ header.hide {
       }
   }
   #artist-profile {
-      padding: 2rem;
+      padding: 2rem 2rem 5rem 2rem;
       position: relative;
       overflow: hidden;
       z-index: 1;

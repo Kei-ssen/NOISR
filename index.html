@@ -17,9 +17,8 @@
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
-   
-    <!-- LIBRERÍAS-->
-
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- ENLAZAR CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -328,7 +327,7 @@
         
         <!-- SECTION 2 -->
         <section id="albumes">
-            <div class="container">
+            <div class="container" data-aos="fade-up">
                 <div class="titleIcon">
                     <h3 class="h3Title">New Albums</h3>
                     <i class="fa-regular fa-clock clockIcon"></i>
@@ -639,7 +638,7 @@
 
         <!-- SECTION 4 -->
         <section id="artists">
-            <div class="container">
+            <div class="container" data-aos="fade-up">
                 <div class="titleIcon">
                     <h3 class="h3Title">New Artists</h3>
                     <i class="fa-solid fa-heart heartIcon"></i>
@@ -736,8 +735,8 @@
                     <span class="h3Title">Best Playlists</span>
                     <i class="fa-solid fa-thumbtack pinchoIcon"></i>
                 </div>
-                <div class="menu">
-                    <div class="playlist">
+                <div class="menu" data-aos="fade-up">
+                    <div class="playlist" >
                         <span class="h3Name">Dreamwave Noise</span>
                         <ul class="menu-group">
                             <li class="listen">
@@ -1190,7 +1189,7 @@
 
         <!-- FORMULARIO -->
         <section id="formulario">
-            <div class="formSect">
+            <div class="formSect" data-aos="fade-up">
                 <div class="formText">
                     <h2 class="title">
                         <span class="dreamText">Got music?</span>
@@ -1300,7 +1299,11 @@
 
     <!-- LIBRERÍAS-->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- JAVASCRIPT -->
     <script src="js/script.js"></script>
 </body>

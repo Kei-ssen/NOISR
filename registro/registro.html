@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>PHP - Ejemplo 6 - Registro</title>
+    <title>Register</title>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Manuale|Montserrat+Alternates&display=swap" rel="stylesheet">
     <link href="../css/registro.css" rel="stylesheet" type="text/css">
@@ -44,14 +44,14 @@
              coincidan. Si devuelve true, se envía el formulario a la página
              indicada en action. Si devuelve false, no se ejecutará el action -->
     <header>
-        <div class="title">
-            <a href="#" class="logo">NOISR</a>
+        <div class="title container">
+            <a href="../index.html" class="logo">NOISR</a>
             <img src="../media/logo.png" alt="" class="logoIcono">
         </div>
     </header>
     <main>
         <p class="instrucciones">Register and listen to the best indie music NOW!</p>
-        <form onSubmit="return validate()" action="registro.php" method="post" enctype="multipart/form-data">
+        <form onSubmit="return validate()" action="registro.php" method="post" enctype="multipart/form-data" class="formulario">
             <label for="id">ID</label>
             <input type="text" id="id" name="id" placeholder="ID" required>
             <label for="pass1">Contraseña</label>
@@ -67,8 +67,6 @@
             <input type="file" id="foto" name="foto">
             </div>
             <input type="submit" value="Registrar usuario">
-         
-            
         </form>
         <p id="oculto" class="error">Passwords don´t match</p>
     </main>
