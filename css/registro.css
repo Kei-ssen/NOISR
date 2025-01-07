@@ -32,7 +32,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat Alternates', sans-serif;
-    color: #444;
+    color: var(--black);
     text-align: center;
 }
 *, *:after{

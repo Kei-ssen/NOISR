@@ -2681,6 +2681,7 @@ header.hide {
   }
   #discover .topper {
     color: var(--primary);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
   #discover .text {
     max-width: 40rem;
@@ -2809,12 +2810,13 @@ header.hide {
   }
   #discover .title {
     margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
   #discover .text {
     padding: 0.75rem 0 0.75rem 1.5rem;
   }
   #discover .text:after {
-    width: 1px;
+    width: 2px;
     height: 100%;
     margin: 0 1.5rem 0 0;
     order: -1;
@@ -2881,7 +2883,6 @@ header.hide {
       align-items: center;
       /* 48px - 64px */
       gap: clamp(3rem, 6vw, 4rem);
-      padding: 3rem;
 
   }
   #artist-profile .content {
@@ -2897,11 +2898,13 @@ header.hide {
 
   #artist-profile .topper {
       color: var(--primary);
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
   #artist-profile .title {
       /* 23 characters wide including spaces */
       max-width: 26ch;
       color: var(--secondaryB);
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
   #artist-profile .text {
       margin-bottom: 1rem;
@@ -2982,33 +2985,38 @@ header.hide {
       display: block;
   }
   #artist-profile .button-solid {
+      
+
       font-size: 1rem;
-      line-height: 3.5rem;
-      text-decoration: none;
-      font-weight: 700;
-      overflow: hidden;
-      margin: 0;
-      color: var(--black);
-      padding: 0 3rem;
-      border-radius: 2rem;
-      border: var(--black) solid 2px;
-      display: inline-block;
-      position: relative;
-      z-index: 1;
-      transition: color 0.3s;
+        text-decoration: none;
+        font-weight: 500;
+        text-align: center;
+        margin: 0;
+        color: var(--black);
+        min-width: 9.375rem;
+        padding: 14px 18px;
+        border-radius: 2rem;
+        background-color: var(--primaryB);
+        border: 2px solid var(--black);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        box-sizing: border-box;
+        transition: 0.3s ease-in-out color;
   }
   #artist-profile .button-solid:before {
-      content: "";
-      position: absolute;
-      display: block;
-      height: 100%;
-      width: 0%;
-      background: var(--secondaryB);
-      opacity: 1;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      transition: width 0.3s;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: var(--secondaryB);
+    border-radius: 2rem;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
   }
   #artist-profile .button-solid:hover {
       color: var(--black);

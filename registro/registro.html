@@ -52,14 +52,14 @@
     <main>
         <p class="instrucciones">Register and listen to the best indie music NOW!</p>
         <form onSubmit="return validate()" action="registro.php" method="post" enctype="multipart/form-data">
-            <label for="id">Identificador</label>
-            <input type="text" id="id" name="id" placeholder="Identificador" required>
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id" placeholder="ID" required>
             <label for="pass1">Contraseña</label>
-            <input type="password" id="pass1" name="pass1" placeholder="Contraseña" required>
-            <label for="pass2">Repita la contraseña</label>
-            <input type="password" id="pass2" name="pass2" placeholder="Repetición de la contraseña" required>
-            <label for="name">Nombre completo</label>
-            <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+            <input type="password" id="pass1" name="pass1" placeholder="Password" required>
+            <label for="pass2">Repeat password</label>
+            <input type="password" id="pass2" name="pass2" placeholder="Repeat password" required>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Full Name" required>
             <div class="photo-upload">
                 <label for="foto">Foto</label>
             <!-- Tamaño máximo de la foto -->
@@ -70,7 +70,7 @@
          
             
         </form>
-        <p id="oculto" class="error">Las contraseñas no coinciden</p>
+        <p id="oculto" class="error">Passwords don´t match</p>
     </main>
     <!-- JAVASCRIPT -->
     <script src="../js/registro.js"></script>
