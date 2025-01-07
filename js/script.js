@@ -171,14 +171,14 @@ $(document).ready(function() {
 
     // MODO CLARO/OSCURO
     $("#to-dark-mode").click(function() {
-        $("#section1 .item, #section1 .intro, .artistTop-grid, #albumes .container, #artists .container, #formulario .formSect, #playlists .playlist, #playlists .item, #discover .container").css("background-color", "rgba(0, 0, 0, 0.2)");
+        $("#section1 .item, #section1 .intro, .artistTop-grid, #albumes .container, #artists .container, #formulario .formSect, #playlists .playlist, #playlists .item").css("background-color", "rgba(0, 0, 0, 0.2)");
 
         $("#to-light-mode").removeClass("hide-cont");
         $("#to-dark-mode").addClass("hide-cont");
     });
 
     $("#to-light-mode").click(function() {
-        $("#section1 .item, #section1 .intro, .artistTop-grid, #albumes .container, #artists .container, #formulario .formSect, #playlists .playlist, #playlists .item, #discover .container").css("background-color", "rgba(255, 255, 255, 0.4)");
+        $("#section1 .item, #section1 .intro, .artistTop-grid, #albumes .container, #artists .container, #formulario .formSect, #playlists .playlist, #playlists .item").css("background-color", "rgba(255, 255, 255, 0.4)");
 
         $("#to-dark-mode").removeClass("hide-cont");
         $("to-light-mode").addClass("hide-cont");
@@ -240,9 +240,7 @@ $(document).ready(function() {
     startCountdown('new1', fecha1);
     startCountdown('new2', fecha2);
     startCountdown('new3', fecha3);
-      // AOS 
-     AOS.init();
-     AOS.refresh();
+
     // PARTICLES.JS
     function initializeParticles(containerId, color) {
         particlesJS(containerId, {

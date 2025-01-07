@@ -54,19 +54,19 @@
         <form onSubmit="return validate()" action="registro.php" method="post" enctype="multipart/form-data" class="formulario">
             <label for="id">ID</label>
             <input type="text" id="id" name="id" placeholder="ID" required>
-            <label for="pass1">Contraseña</label>
+            <label for="pass1">Password</label>
             <input type="password" id="pass1" name="pass1" placeholder="Password" required>
             <label for="pass2">Repeat password</label>
             <input type="password" id="pass2" name="pass2" placeholder="Repeat password" required>
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" placeholder="Full Name" required>
             <div class="photo-upload">
-                <label for="foto">Foto</label>
+                <label for="foto">Image</label>
             <!-- Tamaño máximo de la foto -->
             <input type="hidden" name="MAX_FILE_SIZE" value="300000">
             <input type="file" id="foto" name="foto">
             </div>
-            <input type="submit" value="Registrar usuario">
+            <input type="submit" value="Register user">
         </form>
         <p id="oculto" class="error">Passwords don´t match</p>
     </main>

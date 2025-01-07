@@ -1754,6 +1754,7 @@ header.hide {
 
   a {
     text-decoration: none;
+    color: var(--black);
   }
 
   #artists .image-group {
@@ -2642,14 +2643,14 @@ header.hide {
   }
 }
 
-/*-- -------------------------- -->
-<---        Discover more       -->
-<--- -------------------------- -*/
+
+
+/* DISCOVER MORE */
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #discover {
-    padding: 3rem;
+    padding: 5rem 1rem 2rem 1rem;
   }
   #discover .container {
     width: 100%;
@@ -2662,9 +2663,14 @@ header.hide {
     /* 48px - 64px */
     gap: clamp(3rem, 6vw, 4rem);
     background-color: rgba(255, 255, 255, 0.4);
-    padding: 3.5rem;
-    border-radius: 2rem;
-
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    border-radius: 1.8rem;
+    transition: 0.3s ease-in-out;
+  }
+  #discover .container:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease-in-out;
   }
   #discover .content {
     /* set text align to left if content needs to be left aligned */
@@ -2721,7 +2727,7 @@ header.hide {
     display: flex;
     grid-column: span 12;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
   #discover .item:hover .picture img {
     opacity: .5;
@@ -2743,7 +2749,8 @@ header.hide {
     overflow: hidden;
     display: block;
     position: relative;
-    border-radius: 2rem;
+    border-radius: 1.8rem;
+    transition: 0.3s ease-in-out;
 
   }
   #discover .picture img {
@@ -2754,8 +2761,13 @@ header.hide {
     width: 100%;
     object-fit: cover;
     transition: transform .6s, opacity .3s;
-    border-radius: 2rem;
+    border-radius: 1.8rem;
   }
+  #discover .picture:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease-in-out;
+  }
+
   #discover .h3 {
     font-size: 1.25rem;
     line-height: 1.2em;
@@ -2796,11 +2808,6 @@ header.hide {
 @media only screen and (min-width: 48rem) {
   #discover .container {
     max-width: 80rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-  #discover .container:hover {
-    max-width: 80rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
   #discover .content {
     flex-direction: row;
@@ -2873,7 +2880,7 @@ header.hide {
       }
   }
   #artist-profile {
-      padding: 2rem 2rem 5rem 2rem;
+      padding: 3.5rem 4rem 5rem 4rem;
       position: relative;
       overflow: hidden;
       z-index: 1;
@@ -2933,7 +2940,7 @@ header.hide {
       padding: clamp(1rem, 3vw, 1.5rem);
       box-sizing: border-box;
       background-color: rgba(255, 255, 255, 0.4);
-      border-radius: 1rem;
+      border-radius: 1.8rem;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -2990,24 +2997,22 @@ header.hide {
       display: block;
   }
   #artist-profile .button-solid {
-      
-
       font-size: 1rem;
-        text-decoration: none;
-        font-weight: 500;
-        text-align: center;
-        margin: 0;
-        color: var(--black);
-        min-width: 9.375rem;
-        padding: 14px 18px;
-        border-radius: 2rem;
-        background-color: var(--primaryB);
-        border: 2px solid var(--black);
-        display: inline-block;
-        position: relative;
-        z-index: 1;
-        box-sizing: border-box;
-        transition: 0.3s ease-in-out color;
+      text-decoration: none;
+      font-weight: 500;
+      text-align: center;
+      margin: 0;
+      color: var(--black);
+      min-width: 9.375rem;
+      padding: 14px 18px;
+      border-radius: 2rem;
+      background-color: var(--primaryB);
+      border: 2px solid var(--black);
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      box-sizing: border-box;
+      transition: 0.3s ease-in-out color;
   }
   #artist-profile .button-solid:before {
     content: "";
@@ -3035,10 +3040,15 @@ header.hide {
       /* Changes to auto at desktop */
       height: 32.5rem;
       /* 32px - 48px */
-      border-radius: clamp(2rem, 4vw, 3rem);
+      border-radius: 1.8rem;
       /* clips the corners of the children around the border radius */
       overflow: hidden;
       position: relative;
+      transition: 0.3s ease-in-out;
+  }
+  #artist-profile .image-group:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease-in-out;
   }
   #artist-profile .background {
       width: 100%;
@@ -3063,7 +3073,7 @@ header.hide {
       box-sizing: border-box;
       background-color: var(--primary);
       /* 48px - 80px */
-      border-radius: 2rem;
+      border-radius: 1.8rem;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
