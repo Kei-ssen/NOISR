@@ -181,7 +181,7 @@ $(document).ready(function() {
         $("#section1 .item, #section1 .intro, .artistTop-grid, #albumes .container, #artists .container, #formulario .formSect, #playlists .playlist, #playlists .item, #discover .container").css("background-color", "rgba(255, 255, 255, 0.4)");
 
         $("#to-dark-mode").removeClass("hide-cont");
-        $("#to-light-mode").addClass("hide-cont");
+        $("to-light-mode").addClass("hide-cont");
     });
 
     // BTN ROTAR
